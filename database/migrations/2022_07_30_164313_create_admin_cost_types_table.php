@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('admin_cost_types', function (Blueprint $table) {
             $table->id();
-            $table->string('ExpenseHeadName');
-            $table->integer('ExpenseCode');
+            $table->string('expenseHeadName');
+            $table->integer('expenseCode');
             $table->timestamps();
            
         });

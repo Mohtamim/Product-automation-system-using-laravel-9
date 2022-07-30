@@ -9,8 +9,8 @@ class adminCostType extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'ExpenseHeadName',
-        'ExpenseCode',
+        'expenseHeadName',
+        'expenseCode',
     ];
 
 }
