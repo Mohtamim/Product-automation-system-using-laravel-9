@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\suppliers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\uniteType;
 
-class UniteTypeController extends Controller
+class SuppliersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,10 +42,10 @@ class UniteTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\uniteType  $uniteType
+     * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function show(uniteType $uniteType)
+    public function show(suppliers $suppliers)
     {
         //
     }
@@ -53,10 +53,10 @@ class UniteTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\uniteType  $adminCostType
+     * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function edit(uniteType $uniteType)
+    public function edit(suppliers $suppliers)
     {
         //
     }
@@ -65,10 +65,10 @@ class UniteTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\uniteType  $uniteType
+     * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, uniteType $uniteType)
+    public function update(Request $request, suppliers $suppliers)
     {
         //
     }
@@ -76,10 +76,10 @@ class UniteTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\uniteType  $adminCostType
+     * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(uniteType $uniteType)
+    public function destroy(suppliers $suppliers)
     {
         //
     }
