@@ -8,46 +8,31 @@ use Illuminate\Http\Request;
 
 class AdminCostTypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+      public function index()
     {
-        //
+        $adminCostType= adminCostType::all();
+       return view('admin.AdminCostType.adminCostTypeList')->with('adminCostType', $adminCostType);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
-        //
+        return view('admin.adminCostType.adminCostTypeCreate');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        adminCostType::create($input);
+        return redirect('admin/admin-cost')->with('flash_message','adminCostType Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\adminCostType  $adminCostType
-     * @return \Illuminate\Http\Response
-     */
-    public function show(adminCostType $adminCostType)
+    
+    public function show($id)
     {
-        //
+        $adminCostType = adminCostType::find($id);
+        return view('admin.adminCostTypeshow')->with('uniteType',$adminCostType);
     }
 
     /**
@@ -56,9 +41,10 @@ class AdminCostTypeController extends Controller
      * @param  \App\Models\adminCostType  $adminCostType
      * @return \Illuminate\Http\Response
      */
-    public function edit(adminCostType $adminCostType)
+    public function edit($id)
     {
-        //
+        $adminCostType = adminCostType::find($id);
+        return view('admin.AdminCostType.adminCostTypeEdit')->with('adminCostType',$adminCostType);
     }
 
     /**
@@ -68,9 +54,12 @@ class AdminCostTypeController extends Controller
      * @param  \App\Models\adminCostType  $adminCostType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, adminCostType $adminCostType)
+    public function update(Request $request, $id)
     {
-        //
+        $adminCostType = adminCostType::find($id);
+        $input = $request->all();
+        $adminCostType->update($input);
+        return redirect('admin/admin-cost')->with('flash_message', 'Unite Type Updated!');
     }
 
     /**
