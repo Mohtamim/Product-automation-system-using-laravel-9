@@ -13,10 +13,10 @@ class customers extends Model
     protected $fillable =[
                 'customerName',
                 'contactNo',
-                'emaild',
+                'emailId',
                 'cityLocation',
                 'address',
                 'updatedBalance'
 
-    ];          
+    ];
 }

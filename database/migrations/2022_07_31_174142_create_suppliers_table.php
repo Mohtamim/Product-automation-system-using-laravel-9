@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('supplierName');
             $table->string('supplierCompany');
             $table->string('supplierContactNo');
-            $table->unique('emailAddress');
+            $table->string('emailAddress');
             $table->string('address');
             $table->decimal('updateBalance', 10,2);
             $table->timestamps();

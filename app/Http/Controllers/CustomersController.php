@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
- 
+
     public function index()
     {
        $customer= customers::all();
-       return view('customer.index')->with('customers', $customer);
+       return view('admin.customer.index')->with('customers', $customer);
     }
 
     public function create()
     {
-        return view('customer.create');
+        return view('admin.customer.create');
     }
 
 
@@ -25,20 +25,20 @@ class CustomersController extends Controller
     {
         $input= $request->all();
         customers::create($input);
-        return redirect('customers')->with('flash_message','Customer Added');
+        return redirect('admin/customers')->with('flash_message','Customer Added');
     }
 
     public function show($id)
     {
         $customer = customers::find($id);
-        return view('customer.show')->with('customers',$customer);
+        return view('admin/customer.show')->with('customers',$customer);
     }
 
     public function edit($id)
     {
         $customer = customers::find($id);
-        return view('customer.edit')->with('customers',$customer);
-        
+        return view('admin.customer.edit')->with('customers',$customer);
+
     }
 
     public function update(Request $request, $id)
@@ -46,11 +46,11 @@ class CustomersController extends Controller
         $customers = customers::find($id);
         $input = $request->all();
         $customers->update($input);
-        return redirect('customers')->with('flash_message', 'customer Updated!');
+        return redirect('admin/customers')->with('flash_message', 'customer Updated!');
     }
     public function destroy($id)
     {
        customers::destroy($id);
-        return redirect('customers')->with('flash_message', 'customer deleted!');  
+        return redirect('admin/customers/')->with('flash_message', 'customer deleted!');
     }
 }

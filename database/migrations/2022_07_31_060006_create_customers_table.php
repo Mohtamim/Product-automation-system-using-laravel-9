@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('cityLocation');
             $table->string('address');
             $table->decimal('updatedBalance',5,2);
+            $table->timestamps();
         });
     }
 
