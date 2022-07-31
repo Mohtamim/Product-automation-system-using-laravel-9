@@ -25,7 +25,7 @@
                                     <tr>
                                         <th>Sl</th>
                                         <th>Supplier</th>
-                                        <th>Marerials</th>
+                                        <th>Materials</th>
                                         <th>Unite Type</th>
                                         <th>Unite Price</th>
                                         <th>Total Price</th>
