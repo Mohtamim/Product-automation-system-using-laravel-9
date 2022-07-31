@@ -47,13 +47,7 @@ class AdminCostTypeController extends Controller
         return view('admin.AdminCostType.adminCostTypeEdit')->with('adminCostType',$adminCostType);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\adminCostType  $adminCostType
-     * @return \Illuminate\Http\Response
-     */
+   
     public function update(Request $request, $id)
     {
         $adminCostType = adminCostType::find($id);
@@ -62,14 +56,11 @@ class AdminCostTypeController extends Controller
         return redirect('admin/admin-cost')->with('flash_message', 'Unite Type Updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\adminCostType  $adminCostType
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(adminCostType $adminCostType)
+    
+
+    public function destroy($id)
     {
-        //
+        adminCostType::destroy($id);
+        return redirect('admin/admin-cost')->with('flash_message', 'admin Cost type  deleted!');
     }
 }
