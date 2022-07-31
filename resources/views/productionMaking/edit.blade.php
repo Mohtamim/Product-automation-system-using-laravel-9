@@ -14,13 +14,11 @@
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$products->id}}" />
                             <label class="control-label">Products</label><br>
-                            <input type="text" name="products" id="products" class="form-control" value="{{$products->productName}}><br>
-                            <label class="control-label">Unit Type</label><br>
-                            <input type="text" name="unitType" id="unitType" class="form-control" value="{{$products->selectUniteType}}><br>
-                            <label class="control-label">Price</label><br>
-                            <input type="number" name="productPrice" id="productPrice" class="form-control" value="{{$products->productPrice}}><br>
-                            <label class="control-label">Update Stock</label><br>
-                            <input type="number" name="updatedStock" id="updatedStock" class="form-control" value="{{$products->updatedStock}}><br>
+                            <input type="text" name="selectProduct" id="selectProduct" class="form-control" value="{{$products->selectProduct}}><br>
+                            <label class="control-label">Materials</label><br>
+                            <input type="text" name="selectMaterials" id="selectMaterials" class="form-control" value="{{$products->selectMaterials}}><br>
+                            <label class="control-label">Materials Quantity</label><br>
+                            <input type="text" name="materialsQuantity" id="materialsQuantity" class="form-control" value="{{$products->materialsQuantity}}><br>
                             <input type="submit" value="save" class="btn btn-success">
 
                         </form>

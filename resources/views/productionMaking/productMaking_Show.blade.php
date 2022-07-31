@@ -10,9 +10,8 @@
 
                       <div class="card-body">
                         <h5 class="card-title">Products: {{ $products->productName }}</h5>
-                        <p class="card-text">:Materials: {{ $products->selectUniteType }}</p>
-                        <p class="card-text">Price: {{ $products->productPrice }}</p>
-                        <p class="card-text">Updated Stock: {{ $products->updatedStock}}</p>
+                        <p class="card-text">:Materials: {{ $products->selectMaterials }}</p>
+                        <p class="card-text">Price: {{ $products->materialsQuantity }}</p>
                       </div>
                 </div>
             </div>
