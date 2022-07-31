@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('unitePrice',5,2);
             $table->decimal('quantity',5,2);
             $table->decimal('totalPrice',5,2);
-            $table->timestamps('entryDate');
+            $table->timestamp('entryDate');
             $table->timestamps();
         });
     }

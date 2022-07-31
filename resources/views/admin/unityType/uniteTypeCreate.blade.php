@@ -1,5 +1,31 @@
-@extends('')
-@section('')
+@extends('admin.include.layout')
+@section('content')
+    <div class="container">
+        <div class="row" style="margin:10px;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Create New Unit</h2>
+                    </div>
+
+                      <div class="card-body">
+                        <form action="{{url('admin/unit-type')}}" method="post" class="form">
+                            {!! csrf_field() !!}
+
+                            <label class="control-label">Unite Name</label><br>
+                            <input type="text" name="uniteName" id="uniteName" class="form-control"><br>
+
+                            <input type="submit" value="save" class="btn btn-success">
+
+                        </form>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+@endsection
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,7 +35,7 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('')}}" method="post" class="form">
+                        <form action="{{url('admin/unit-type')}}" method="post" class="form">
                             {!! csrf_field() !!}
 
                             <label class="control-label">Unite Name</label><br>

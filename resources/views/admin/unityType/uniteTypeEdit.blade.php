@@ -1,7 +1,7 @@
-@extends('')
-@section('')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
-        <div class="row" style="margin:20px;">
+        <div class="row" style="margin:10px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -9,12 +9,12 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{ url() }}" method="post">
+                        <form action="{{ url('admin/unit-type/'.$uniteType->id) }}" method="post">
                             {!! csrf_field() !!}
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$uniteType->id}}" />
                             <label class="control-label">Unite Type Name</label><br>
-                            <input type="text" name="name" id="name" class="form-control" value="{{ $uniteType->uniteName }}"><br>
+                            <input type="text" name="uniteName" id="uniteName" class="form-control" value="{{ $uniteType->uniteName }}"><br>
 
                             <input type="submit" value="update" class="btn btn-success">
                             <input type="cancel" value="cancel" class="btn btn-danger">

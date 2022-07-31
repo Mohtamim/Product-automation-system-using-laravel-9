@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('productionManages', function (Blueprint $table) {
             $table->id();
-            $table->timestamps('entryDate');
+            $table->timestamp('entryDate');
             $table->string('productionNo');
-            $table->timestamps('expiryDate');
+            $table->date('expiryDate');
             $table->string('selectProductName');
             $table->string('uniteType');
-            $table->decimal('productionQuantity',5,2); 
+            $table->decimal('productionQuantity',5,2);
             $table->string('selectedMaterials');
         });
     }
