@@ -8,79 +8,53 @@ use Illuminate\Http\Request;
 
 class ProductMakingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        $productMaking =productMaking::all();
+        return view('productMaking.index')->with('materialsProducts', $productMaking);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
-        //
+        return view('productMaking.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        productMaking::create($input);
+        return redirect('productMaking')->with('flash_message','product Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\productMaking  $productMaking
-     * @return \Illuminate\Http\Response
-     */
-    public function show(productMaking $productMaking)
+    public function show(productMaking $id)
     {
-        //
+        $productMaking = productMaking::find($id);
+        return view('productMaking.productMaking_Show')->with('productMaking',$productMaking);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\productMaking  $productMaking
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(productMaking $productMaking)
+    
+    public function edit($id)
     {
-        //
+        $productMaking = productMaking::find($id);
+        return view('productMaking.edit')->with('productMaking', $productMaking);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\productMaking  $productMaking
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, productMaking $productMaking)
+    
+    public function update(Request $request, $id)
     {
-        //
+        $productMaking = productMaking::find($id);
+        $input =$request->all();
+        $productMaking->update($input);
+        return redirect('productMaking')->with('flash_massage','products updated!!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\productMaking  $productMaking
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(productMaking $productMaking)
+    
+    public function destroy(productMaking $id)
     {
-        //
+        productMaking::destroy($id);
+        return redirect('productMaking')->with('flash_massage','Product Deleted');
     }
 }

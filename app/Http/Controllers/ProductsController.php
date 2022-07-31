@@ -8,79 +8,49 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        $products =products::all();
+        return view('products.index')->with('products', $products);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        products::create($input);
+        return redirect('products')->with('flash_message','product Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\products  $products
-     * @return \Illuminate\Http\Response
-     */
-    public function show(products $products)
+    public function show(products $id)
     {
-        //
+        $products = products::find($id);
+        return view('products.productShow')->with('products',$products);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\products  $products
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(products $products)
+    
+    public function edit($id)
     {
-        //
+        $products = products::find($id);
+        return view('products.edit')->with('products', $products);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\products  $products
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, products $products)
+    public function update(Request $request, $id)
     {
-        //
+        $products = products::find($id);
+        $input =$request->all();
+        $products->update($input);
+        return redirect('products')->with('flash_massage','products updated!!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\products  $products
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(products $products)
+    public function destroy(products $id)
     {
-        //
+        products::destroy($id);
+        return redirect('products')->with('flash_massage','Product Deleted');
     }
 }

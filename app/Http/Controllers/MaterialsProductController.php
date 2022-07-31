@@ -8,79 +8,53 @@ use Illuminate\Http\Request;
 
 class MaterialsProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        $materialsProducts =materialsProduct::all();
+        return view('materialsProducts.index')->with('materialsProducts', $materialsProducts);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
-        //
+        return view('materialsProducts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        materialsProduct::create($input);
+        return redirect('materialsProduct')->with('flash_message','product Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\materialsProduct  $materialsProduct
-     * @return \Illuminate\Http\Response
-     */
-    public function show(materialsProduct $materialsProduct)
+    
+    public function show(materialsProduct $id)
     {
-        //
+        $materialsProduct = materialsProduct::find($id);
+        return view('materialsProduct.materialsProduct_Show')->with('products',$materialsProduct);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\materialsProduct  $materialsProduct
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(materialsProduct $materialsProduct)
+    
+    public function edit($id)
     {
-        //
+        $materialsProduct = materialsProduct::find($id);
+        return view('materialsProduct.edit')->with('materialsProduct', $materialsProduct);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\materialsProduct  $materialsProduct
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, materialsProduct $materialsProduct)
+    
+    public function update(Request $request, $id)
     {
-        //
+        $materialsProduct = materialsProduct::find($id);
+        $input =$request->all();
+        $materialsProduct->update($input);
+        return redirect('materialsProduct')->with('flash_massage','products updated!!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\materialsProduct  $materialsProduct
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(materialsProduct $materialsProduct)
+   
+    public function destroy(materialsProduct $id)
     {
-        //
+        materialsProduct::destroy($id);
+        return redirect('materialsProduct')->with('flash_massage','Product Deleted');
     }
 }
