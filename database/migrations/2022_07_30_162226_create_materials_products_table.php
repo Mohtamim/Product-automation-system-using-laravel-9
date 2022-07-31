@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('materials_products', function (Blueprint $table) {
             $table->id();
             $table->string('selectSupplier');
-            $table->string('selectMarerials');
+            $table->string('selectMaterials');
             $table->string('uniteType');
             $table->decimal('unitePrice',5,2);
             $table->decimal('quantity',5,2);
