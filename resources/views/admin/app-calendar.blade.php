@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!doctype blade.php>
+<blade.php lang="en">
 
 <head>
 <title>Mooli | Calendar</title>
@@ -23,14 +23,14 @@
 
 </head>
 <body>
-    
+
 <div id="body" class="theme-cyan">
 
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="m-t-30"><img src="assets/images/icon.svg" width="40" height="40" alt="Mooli"></div>
-            <p>Please wait...</p>        
+            <p>Please wait...</p>
         </div>
     </div>
 
@@ -95,12 +95,12 @@
             <div class="container-fluid">
                 <div class="navbar-left">
                     <div class="navbar-btn">
-                        <a href="index.html"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"></a>
+                        <a href="index.blade.php"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"></a>
                         <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-align-left"></i></button>
                     </div>
                     <form id="navbar-search" class="navbar-form search-form">
                         <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
-                        <input value="" class="form-control" placeholder="Search here..." type="text">                    
+                        <input value="" class="form-control" placeholder="Search here..." type="text">
                     </form>
                 </div>
                 <div class="navbar-right">
@@ -184,7 +184,7 @@
                                                 <small>WE have fix all Design bug with Responsive</small>
                                             </div>
                                         </a>
-                                    </li>                               
+                                    </li>
                                     <li>
                                         <a href="#">
                                             <div class="mr-4"><i class="fa fa-user text-info"></i></div>
@@ -227,7 +227,7 @@
                             </li>
                             <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="fa fa-comments-o"></i></a></li>
                             <li class="hidden-xs"><a href="javascript:void(0);" id="btnFullscreen" class="icon-menu"><i class="fa fa-arrows-alt"></i></a></li>
-                            <li><a href="page-login.html" class="icon-menu"><i class="fa fa-power-off"></i></a></li>
+                            <li><a href="page-login.blade.php" class="icon-menu"><i class="fa fa-power-off"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                             <h2>Recent search result</h2>
                             <ul class="header-dropdown dropdown">
                                 <li><a href="javascript:void(0);">Clear data</a></li>
-                                <li><a href="page-search-results.html"><i class="fa fa-external-link"></i></a></li>
+                                <li><a href="page-search-results.blade.php"><i class="fa fa-external-link"></i></a></li>
                             </ul>
                         </div>
                         <div class="body">
@@ -257,7 +257,7 @@
                                     <p class="text-muted">he point of using Lorem Ipsum is that it has a more-or-less English.</p>
                                     <div class="text-muted font-13">
                                         <ul class="list-inline">
-                                            <li class="list-inline-item"><span class="badge badge-success margin-0">HTML</span></li>
+                                            <li class="list-inline-item"><span class="badge badge-success margin-0">blade.php</span></li>
                                             <li class="list-inline-item">Oct 13 2020</li>
                                         </ul>
                                     </div>
@@ -283,7 +283,7 @@
         <div id="left-sidebar" class="sidebar">
             <a href="#" class="menu_toggle"><i class="fa fa-angle-left"></i></a>
             <div class="navbar-brand">
-                <a href="index.html"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"><span>Mooli</span></a>
+                <a href="index.blade.php"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"><span>Mooli</span></a>
                 <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
             </div>
             <div class="sidebar-scroll">
@@ -295,106 +295,106 @@
                         <span>Web Developer,</span>
                         <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Alan Green</strong></a>
                         <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
-                            <li><a href="page-profile.html"><i class="fa fa-user"></i>My Profile</a></li>
-                            <li><a href="app-inbox.html"><i class="fa fa-envelope"></i>Messages</a></li>
-                            <li><a href="setting.html"><i class="fa fa-gear"></i>Settings</a></li>
+                            <li><a href="page-profile.blade.php"><i class="fa fa-user"></i>My Profile</a></li>
+                            <li><a href="app-inbox.blade.php"><i class="fa fa-envelope"></i>Messages</a></li>
+                            <li><a href="setting.blade.php"><i class="fa fa-gear"></i>Settings</a></li>
                             <li class="divider"></li>
-                            <li><a href="page-login.html"><i class="fa fa-power-off"></i>Logout</a></li>
+                            <li><a href="page-login.blade.php"><i class="fa fa-power-off"></i>Logout</a></li>
                         </ul>
                     </div>
-                </div>  
+                </div>
                 <nav id="left-sidebar-nav" class="sidebar-nav">
                     <ul id="main-menu" class="metismenu animation-li-delay">
                         <li class="header">Main</li>
-                        <li><a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                        <li><a href="index.blade.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                         <li class="header">Apps</li>
-                        <li><a href="app-inbox.html"><i class="fa fa-envelope"></i> <span>Email</span> <span class="badge badge-default mr-0">12</span></a></li>
-                        <li><a href="app-chat.html"><i class="fa fa-comments"></i> <span>Chat</span></a></li>
-                        <li class="active"><a href="app-calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
-                        <li><a href="app-todo.html"><i class="fa fa-th-list"></i> <span>Todo List</span></a></li>
-                        
-                        <li><a href="app-filemanager.html"><i class="fa fa-folder"></i> <span>File Manager</span></a></li>
-                        <li><a href="app-contacts.html"><i class="fa fa-address-book"></i> <span>Contacts</span></a></li>
-                        <li><a href="app-scrumboard.html"><i class="fa fa-tasks"></i> <span>Scrumboard</span></a></li>
-                        <li><a href="page-news.html"><i class="fa fa-globe"></i> <span>Blog</span></a></li>
-                        <li><a href="page-social.html"><i class="fa fa-share-alt-square"></i> <span>Social</span></a></li>
+                        <li><a href="app-inbox.blade.php"><i class="fa fa-envelope"></i> <span>Email</span> <span class="badge badge-default mr-0">12</span></a></li>
+                        <li><a href="app-chat.blade.php"><i class="fa fa-comments"></i> <span>Chat</span></a></li>
+                        <li class="active"><a href="app-calendar.blade.php"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
+                        <li><a href="app-todo.blade.php"><i class="fa fa-th-list"></i> <span>Todo List</span></a></li>
+
+                        <li><a href="app-filemanager.blade.php"><i class="fa fa-folder"></i> <span>File Manager</span></a></li>
+                        <li><a href="app-contacts.blade.php"><i class="fa fa-address-book"></i> <span>Contacts</span></a></li>
+                        <li><a href="app-scrumboard.blade.php"><i class="fa fa-tasks"></i> <span>Scrumboard</span></a></li>
+                        <li><a href="page-news.blade.php"><i class="fa fa-globe"></i> <span>Blog</span></a></li>
+                        <li><a href="page-social.blade.php"><i class="fa fa-share-alt-square"></i> <span>Social</span></a></li>
                         <li class="header">Vendors</li>
                         <li>
                             <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>ui Elements</span></a>
                             <ul>
-                                <li><a href="ui-helper-class.html">Helper Classes</a></li>
-                                <li><a href="ui-bootstrap.html">Bootstrap UI</a></li>
-                                <li><a href="ui-typography.html">Typography</a></li>
-                                <li><a href="ui-tabs.html">Tabs</a></li>
-                                <li><a href="ui-buttons.html">Buttons</a></li>                            
-                                <li><a href="ui-icons.html">Icons</a></li>
-                                <li><a href="ui-notifications.html">Notifications</a></li>
-                                <li><a href="ui-colors.html">Colors</a></li>
-                                <li><a href="ui-dialogs.html">Dialogs</a></li>                                    
-                                <li><a href="ui-list-group.html">List Group</a></li>
-                                <li><a href="ui-media-object.html">Media Object</a></li>
-                                <li><a href="ui-modals.html">Modals</a></li>
-                                <li><a href="ui-nestable.html">Nestable</a></li>
-                                <li><a href="ui-progressbars.html">Progress Bars</a></li>
-                                <li><a href="ui-range-sliders.html">Range Sliders</a></li>
+                                <li><a href="ui-helper-class.blade.php">Helper Classes</a></li>
+                                <li><a href="ui-bootstrap.blade.php">Bootstrap UI</a></li>
+                                <li><a href="ui-typography.blade.php">Typography</a></li>
+                                <li><a href="ui-tabs.blade.php">Tabs</a></li>
+                                <li><a href="ui-buttons.blade.php">Buttons</a></li>
+                                <li><a href="ui-icons.blade.php">Icons</a></li>
+                                <li><a href="ui-notifications.blade.php">Notifications</a></li>
+                                <li><a href="ui-colors.blade.php">Colors</a></li>
+                                <li><a href="ui-dialogs.blade.php">Dialogs</a></li>
+                                <li><a href="ui-list-group.blade.php">List Group</a></li>
+                                <li><a href="ui-media-object.blade.php">Media Object</a></li>
+                                <li><a href="ui-modals.blade.php">Modals</a></li>
+                                <li><a href="ui-nestable.blade.php">Nestable</a></li>
+                                <li><a href="ui-progressbars.blade.php">Progress Bars</a></li>
+                                <li><a href="ui-range-sliders.blade.php">Range Sliders</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#forms" class="has-arrow"><i class="fa fa-pencil"></i><span>Forms Elements</span></a>
                             <ul>
-                                <li><a href="forms-basic.html">Basic Elements</a></li>
-                                <li><a href="forms-advanced.html">Advanced Elements</a></li>
-                                <li><a href="forms-validation.html">Form Validation</a></li>
-                                <li><a href="forms-wizard.html">Form Wizard</a></li>
-                                <li><a href="forms-dragdropupload.html">Drag &amp; Drop Upload</a></li>
-                                <li><a href="forms-cropping.html">Image Cropping</a></li>
-                                <li><a href="forms-summernote.html">Summernote</a></li>
-                                <li><a href="forms-editors.html">CKEditor</a></li>
-                                <li><a href="forms-markdown.html">Markdown</a></li>
+                                <li><a href="forms-basic.blade.php">Basic Elements</a></li>
+                                <li><a href="forms-advanced.blade.php">Advanced Elements</a></li>
+                                <li><a href="forms-validation.blade.php">Form Validation</a></li>
+                                <li><a href="forms-wizard.blade.php">Form Wizard</a></li>
+                                <li><a href="forms-dragdropupload.blade.php">Drag &amp; Drop Upload</a></li>
+                                <li><a href="forms-cropping.blade.php">Image Cropping</a></li>
+                                <li><a href="forms-summernote.blade.php">Summernote</a></li>
+                                <li><a href="forms-editors.blade.php">CKEditor</a></li>
+                                <li><a href="forms-markdown.blade.php">Markdown</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#Tables" class="has-arrow"><i class="fa fa-table"></i><span>Tables</span></a>
                             <ul>
-                                <li><a href="table-normal.html">Normal Tables</a></li>
-                                <li><a href="table-jquery-datatable.html">Jquery Datatables</a></li>
-                                <li><a href="table-editable.html">Editable Tables</a></li>
-                                <li><a href="table-color.html">Tables Color</a></li>
-                                <li><a href="table-filter.html">Table Filter</a></li>
-                                <li><a href="table-dragger.html">Table dragger</a></li>
+                                <li><a href="table-normal.blade.php">Normal Tables</a></li>
+                                <li><a href="table-jquery-datatable.blade.php">Jquery Datatables</a></li>
+                                <li><a href="table-editable.blade.php">Editable Tables</a></li>
+                                <li><a href="table-color.blade.php">Tables Color</a></li>
+                                <li><a href="table-filter.blade.php">Table Filter</a></li>
+                                <li><a href="table-dragger.blade.php">Table dragger</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#charts" class="has-arrow"><i class="fa fa-pie-chart"></i><span>Charts</span></a>
                             <ul>
-                                <li><a href="chart-apex.html">Apex Charts</a></li>
-                                <li><a href="chart-c3.html">C3 Charts</a></li>
-                                <li><a href="chart-morris.html">Morris Chart</a></li>
-                                <li><a href="chart-flot.html">Flot Chart</a></li>
-                                <li><a href="chart-chartjs.html">ChartJS</a></li>
-                                <li><a href="chart-jquery-knob.html">Jquery Knob</a></li>                            
-                                <li><a href="chart-sparkline.html">Sparkline Chart</a></li>
+                                <li><a href="chart-apex.blade.php">Apex Charts</a></li>
+                                <li><a href="chart-c3.blade.php">C3 Charts</a></li>
+                                <li><a href="chart-morris.blade.php">Morris Chart</a></li>
+                                <li><a href="chart-flot.blade.php">Flot Chart</a></li>
+                                <li><a href="chart-chartjs.blade.php">ChartJS</a></li>
+                                <li><a href="chart-jquery-knob.blade.php">Jquery Knob</a></li>
+                                <li><a href="chart-sparkline.blade.php">Sparkline Chart</a></li>
                             </ul>
                         </li>
                         <li class="header">More Pages</li>
-                        <li><a href="widgets.html"><i class="fa fa-puzzle-piece"></i><span>Widgets</span></a></li>
+                        <li><a href="widgets.blade.php"><i class="fa fa-puzzle-piece"></i><span>Widgets</span></a></li>
                         <li>
                             <a href="#Pages" class="has-arrow"><i class="fa fa-folder"></i><span>Pages</span></a>
                             <ul>
-                                <li><a href="page-login.html">Login</a></li>
-                                <li><a href="page-register.html">Register</a></li>
-                                <li><a href="page-forgot-password.html">Forgot Password</a></li>
-                                <li><a href="page-404.html">Page 404</a></li>
-                                <li><a href="page-blank.html">Blank Page</a></li>
-                                <li><a href="page-search-results.html">Search Results</a></li>
-                                <li><a href="page-profile.html">Profile </a></li>
-                                <li><a href="page-invoices.html">Invoices </a></li>
-                                <li><a href="page-gallery.html">Image Gallery </a></li>
-                                <li><a href="page-timeline.html">Timeline</a></li>
-                                <li><a href="page-pricing.html">Pricing</a></li>
+                                <li><a href="page-login.blade.php">Login</a></li>
+                                <li><a href="page-register.blade.php">Register</a></li>
+                                <li><a href="page-forgot-password.blade.php">Forgot Password</a></li>
+                                <li><a href="page-404.blade.php">Page 404</a></li>
+                                <li><a href="page-blank.blade.php">Blank Page</a></li>
+                                <li><a href="page-search-results.blade.php">Search Results</a></li>
+                                <li><a href="page-profile.blade.php">Profile </a></li>
+                                <li><a href="page-invoices.blade.php">Invoices </a></li>
+                                <li><a href="page-gallery.blade.php">Image Gallery </a></li>
+                                <li><a href="page-timeline.blade.php">Timeline</a></li>
+                                <li><a href="page-pricing.blade.php">Pricing</a></li>
                             </ul>
                         </li>
-                        <li><a href="map-jvectormap.html"><i class="fa fa-map"></i> <span>jVector Maps</span></a></li>
+                        <li><a href="map-jvectormap.blade.php"><i class="fa fa-map"></i> <span>jVector Maps</span></a></li>
                         <li class="extra_widget">
                             <div class="form-group">
                                 <label class="d-block">Traffic this Month <span class="float-right">77%</span></label>
@@ -410,14 +410,14 @@
                             </div>
                         </li>
                     </ul>
-                </nav>     
+                </nav>
             </div>
         </div>
 
         <!-- Right bar chat  -->
         <div id="rightbar" class="rightbar">
             <div class="slim_scroll">
-                
+
                 <div class="chat_list">
                     <form>
                         <div class="input-group c_input_group">
@@ -518,7 +518,7 @@
                                                 <span class="message">How do you do?</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="offline">
                                         <a href="javascript:void(0);" class="media">
@@ -528,7 +528,7 @@
                                                 <span class="message">I've forgotten how it felt before</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="offline">
                                         <a href="javascript:void(0);" class="media">
@@ -538,7 +538,7 @@
                                                 <span class="message">Wasup for the third time like...</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="offline">
                                         <a href="javascript:void(0);" class="media">
@@ -548,7 +548,7 @@
                                                 <span class="message">How do you do?</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -562,7 +562,7 @@
                                                 <span class="message">johnsmith@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="offline">
                                         <a href="javascript:void(0);" class="media">
@@ -572,7 +572,7 @@
                                                 <span class="message">hermanbeck@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
@@ -582,7 +582,7 @@
                                                 <span class="message">maryadams@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
@@ -592,7 +592,7 @@
                                                 <span class="message">mikethimas@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
@@ -602,7 +602,7 @@
                                                 <span class="message">clairepeters@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
@@ -612,7 +612,7 @@
                                                 <span class="message">It’s not that bad...</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="offline">
                                         <a href="javascript:void(0);" class="media">
@@ -622,7 +622,7 @@
                                                 <span class="message">eringonzales@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
@@ -632,7 +632,7 @@
                                                 <span class="message">susiewillis@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
@@ -642,7 +642,7 @@
                                                 <span class="message">johnsmith@info.com</span>
                                                 <span class="badge badge-outline status"></span>
                                             </div>
-                                        </a>                            
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -722,7 +722,7 @@
             </div>
         </div>
         <!-- Main body part  -->
-        <div id="main-content">       
+        <div id="main-content">
 
             <div class="container-fluid">
                 <!-- Page header section  -->
@@ -731,7 +731,7 @@
                         <div class="col-xl-6 col-md-5 col-sm-12">
                             <h1>Hi, Welcomeback!</h1>
                             <span>JustDo Calendar,</span>
-                        </div>            
+                        </div>
                         <div class="col-xl-6 col-md-7 col-sm-12 text-md-right">
                             <div class="d-flex align-items-center justify-content-md-end mt-4 mt-md-0 flex-wrap vivify pullUp delay-550">
                                 <div class="border-right pr-4 mr-4 mb-3 mb-xl-0 hidden-xs">
@@ -762,13 +762,13 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active"><a class="nav-link" href="app-calendar.html">Calendar</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="app-events.html">Events</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="index3.html">Campaign</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="app-calendar.blade.php">Calendar</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="app-events.blade.php">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index3.blade.php">Campaign</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#">Conference</a></li>
                                 </ul>
                                 <div class="ml-auto">
-                                    <a href="setting.html" class="btn btn-default">Settings</a>
+                                    <a href="setting.blade.php" class="btn btn-default">Settings</a>
                                 </div>
                             </div>
                         </nav>
@@ -783,9 +783,9 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
-    
+
 </div>
 
 
@@ -825,7 +825,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -944,15 +944,15 @@
 </div>
 
 <!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/libscripts.bundle.js"></script>
 <script src="assets/bundles/vendorscripts.bundle.js"></script>
 
-<!-- Vedor js file and create bundle with grunt  --> 
+<!-- Vedor js file and create bundle with grunt  -->
 <script src="assets/bundles/fullcalendarscripts.bundle.js"></script><!--/ calender javascripts -->
 <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
-<!-- Project core js file minify with grunt --> 
+<!-- Project core js file minify with grunt -->
 <script src="assets/bundles/mainscripts.bundle.js"></script>
 <script src="../js/pages/calendar.js"></script>
 </body>
-</html>
+</blade.php>

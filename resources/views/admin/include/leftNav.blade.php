@@ -26,9 +26,9 @@
                 <li class="header">Main</li>
                 <li class="active"><a href="index.blade.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li class="header">Apps</li>
-                <li><a href="app-inbox.blade.php"><i class="fa fa-envelope"></i> <span>Email</span> <span class="badge badge-default mr-0">12</span></a></li>
-                <li><a href="app-chat.blade.php"><i class="fa fa-comments"></i> <span>Chat</span></a></li>
-                <li><a href="app-calendar.blade.php"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
+                <li><a href="app-inbox.blade.php"><i class="fa fa-envelope"></i> <span>Prodtucs</span> <span class="badge badge-default mr-0">12</span></a></li>
+                <li><a href="app-chat.blade.php"><i class="fa fa-comments"></i> <span>Supplier</span></a></li>
+                <li><a href="app-calendar.blade.php"><i class="fa fa-calendar"></i> <span>Customer</span></a></li>
                 <li><a href="app-todo.blade.php"><i class="fa fa-th-list"></i> <span>Todo List</span></a></li>
                 <li><a href="app-filemanager.blade.php"><i class="fa fa-folder"></i> <span>File Manager</span></a></li>
                 <li><a href="app-contacts.blade.php"><i class="fa fa-address-book"></i> <span>Contacts</span></a></li>
