@@ -29,7 +29,7 @@
                 <li><a href="app-inbox.blade.php"><i class="fa-brands fa-product-hunt"></i> <span>Prodtucs</span> <span class="badge badge-default mr-0">12</span></a></li>
                 <li><a href="app-chat.blade.php"><i class="fas fa-industry"></i> <span>Suppliers</span></a></li>
                 <li><a href="app-calendar.blade.php"><i class="fa fa-users" aria-hidden="true"></i> <span>Customers</span></a></li>
-                <li><a href="app-todo.blade.php"><i class="fa fa-th-list"></i> <span>Todo List</span></a></li>
+                <li><a href="{{url('admin/unit-type')}}"><i class="fa fa-th-list"></i> <span>Unit Type</span></a></li>
                 <li><a href="app-filemanager.blade.php"><i class="fa fa-folder"></i> <span>File Manager</span></a></li>
                 <li><a href="app-contacts.blade.php"><i class="fa fa-address-book"></i> <span>Contacts</span></a></li>
                 <li><a href="app-scrumboard.blade.php"><i class="fa fa-tasks"></i> <span>Scrumboard</span></a></li>

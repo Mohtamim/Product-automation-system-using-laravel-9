@@ -16,7 +16,7 @@ class UniteTypeController extends Controller
     public function index()
     {
         $uniteType= uniteType::all();
-       return view('admin.uniteType')->with('uniteType', $uniteType);
+       return view('admin.unityType.uniteType')->with('uniteType', $uniteType);
     }
 
     /**
@@ -26,7 +26,7 @@ class UniteTypeController extends Controller
      */
     public function create()
     {
-        return view('admin.uniteTypeCreate');
+        return view('admin.unityType.uniteTypeCreate');
     }
 
     /**
@@ -39,7 +39,7 @@ class UniteTypeController extends Controller
     {
         $input= $request->all();
         uniteType::create($input);
-        return redirect('uniteType')->with('flash_message','uniteType Added');
+        return redirect('admin/unit-type')->with('flash_message','uniteType Added');
     }
 
     /**
@@ -63,7 +63,7 @@ class UniteTypeController extends Controller
     public function edit($id)
     {
         $uniteType = uniteType::find($id);
-        return view('admin.uniteTypeEdit')->with('uniteType',$uniteType);
+        return view('admin.unityType.uniteTypeEdit')->with('uniteType',$uniteType);
     }
 
     /**
@@ -78,7 +78,7 @@ class UniteTypeController extends Controller
         $uniteType = uniteType::find($id);
         $input = $request->all();
         $uniteType->update($input);
-        return redirect('uniteType')->with('flash_message', 'Unite Type Updated!');
+        return redirect('admin/unit-type')->with('flash_message', 'Unite Type Updated!');
     }
 
     /**
@@ -90,6 +90,6 @@ class UniteTypeController extends Controller
     public function destroy($id)
     {
         uniteType::destroy($id);
-        return redirect('uniteType')->with('flash_message', 'Unite Type deleted!');
+        return redirect('admin/unit-type')->with('flash_message', 'Unite Type deleted!');
     }
 }

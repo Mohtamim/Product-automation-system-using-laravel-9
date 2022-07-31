@@ -15,9 +15,8 @@ return new class extends Migration
     {
         Schema::create('admini_cost_entries', function (Blueprint $table) {
             $table->id();
-            $table->foreign('expenseHeadName')->references('id')->on('admin_cost_types')->onDelete('cascade');
-            $table->decimal('expenseAmount', 9, 3);//ekhane bigInteger/float use hobe naki decimal correction me
-            $table->timestamps('expenseDate');
+            $table->double('expenseAmount', 10, 2);//ekhane bigInteger/float use hobe naki decimal correction me
+            $table->timestamp('expenseDate');
             $table->string('note');
         });
     }

@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('customerName');
             $table->string('contactNo');
-            $table->unique('emailId');
+            $table->string('emailId');
             $table->string('cityLocation');
             $table->string('address');
-            $table->decimal('updatedBalance,5,2');
+            $table->decimal('updatedBalance',5,2);
         });
     }
 

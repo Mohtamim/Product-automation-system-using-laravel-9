@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('productPrice,5,2');
             $table->string('entryQuantity');
             $table->decimal('totalAmount,5,2');
-            $table->timestamps('entryDate');
+            $table->timestamp('entryDate');
         });
     }
 
