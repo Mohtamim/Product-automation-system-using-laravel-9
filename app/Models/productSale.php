@@ -5,16 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class productMaking extends Model
+class productSale extends Model
 {
-    
     use HasFactory;
-    protected $table ='productMaking';
+    protected $table ='productsale';
     protected $primarykey ='id';
     protected $fillable =[
+                'selectCustomer',
                 'selectProduct',
-                'selectMaterials',
-                'materialsQuantity'
+                'productPrice',
+                'entryQuantity',
+                'totalAmount',
+                'entryDate'
+                
                 
     ];
 }
