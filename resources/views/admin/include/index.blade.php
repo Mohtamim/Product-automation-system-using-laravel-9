@@ -2,7 +2,7 @@
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
-            <div class="m-t-30"><img src="assets/images/icon.svg" width="40" height="40" alt="PAS"></div>
+            <div class="m-t-30"><img src="{{ asset('assets/images/icon.svg') }}" width="40" height="40" alt="PAS"></div>
             <p>Please wait...</p>
         </div>
     </div>
@@ -111,7 +111,7 @@
                                     </li>
                                     <li class="offline">
                                         <a href="javascript:void(0);" class="media">
-                                            <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                            <img class="media-object " src="{{ asset('assets/images/xs/avatar2.jpg') }}" alt="">
                                             <div class="media-body">
                                                 <span class="name">Lisa Garett <small class="text-muted font-12">18 min</small></span>
                                                 <span class="message">I've forgotten how it felt before</span>
@@ -121,7 +121,7 @@
                                     </li>
                                     <li class="offline">
                                         <a href="javascript:void(0);" class="media">
-                                            <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                            <img class="media-object " src="{{ asset('assets/images/xs/avatar1.jpg') }}" alt="">
                                             <div class="media-body">
                                                 <span class="name">Folisise Chosielie <small class="text-muted font-12">23 min</small></span>
                                                 <span class="message">Wasup for the third time like...</span>
@@ -131,7 +131,7 @@
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
-                                            <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                            <img class="media-object " src="{{ asset('assets/images/xs/avatar3.jpg') }}" alt="">
                                             <div class="media-body">
                                                 <span class="name">Marshall Nichols <small class="text-muted font-12">27 min</small></span>
                                                 <span class="message">But we’re probably gonna need a new carpet.</span>
@@ -141,7 +141,7 @@
                                     </li>
                                     <li class="online">
                                         <a href="javascript:void(0);" class="media">
-                                            <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                            <img class="media-object " src="{{ asset('assets/images/xs/avatar5.jpg') }}" alt="">
                                             <div class="media-body">
                                                 <span class="name">Debra Stewart <small class="text-muted font-12">38 min</small></span>
                                                 <span class="message">It’s not that bad...</span>
