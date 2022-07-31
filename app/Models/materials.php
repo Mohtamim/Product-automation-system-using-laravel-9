@@ -5,12 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class uniteType extends Model
+class materials extends Model
 {
     use HasFactory;
-    protected $table = 'uniteType';
+    protected $table = 'materials';
     protected $primaryKey ='id';
     protected $fillable = [
-        'uniteName',
+        'materialsName',
+        'materialsCode',
+        'materialsUnite',
+        'materialsUnitePrice',
+        'updateStock',
     ];
 }
