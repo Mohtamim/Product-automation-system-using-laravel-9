@@ -12,11 +12,12 @@
             </thead>
             <tbody>
             <tr>
+                @foreach ($uniteType as $item )
                 <td>{{$loop->iteration}}</td>
                 <td>{{$item->uniteName}}</td>
                 <td>
-                    <a href="{{url(''.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                    <a href="{{url(''.$item->id)}}" class="btn btn-primary btn-sm" title="Edit Student" aria-hidden="true"><i class="fa fa-pencil"></i></a>
+                    <a href="{{url(''.$item->id)}}" class="btn btn-info btn-sm" title="View uniteType" aria-hidden="true"><i class="fa fa-eye"></i></a>
+                    <a href="{{url(''.$item->id)}}" class="btn btn-primary btn-sm" title="Edit uniteType" aria-hidden="true"><i class="fa fa-pencil"></i></a>
                         <form method="POST" action="{{ url(''.$item->id) }}" accept-charset="UTF-8" style="display:inline">
                             {{ method_field('DELETE') }}
                             {{ csrf_field() }}
@@ -24,6 +25,7 @@
                         </form>
                 </td>
             </tr>
+            @endforeach
             </tbody>
         </table>
     </div>

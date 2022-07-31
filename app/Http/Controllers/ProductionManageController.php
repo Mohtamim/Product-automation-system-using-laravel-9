@@ -8,79 +8,49 @@ use Illuminate\Http\Request;
 
 class ProductionManageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function index()
     {
-        //
+       $production= productionManage::all();
+       return view('productionManages.index')->with('productionManages', $production);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('productionManages.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        productionManage::create($input);
+        return redirect('productionManage')->with('flash_message','production Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\productionManage  $productionManage
-     * @return \Illuminate\Http\Response
-     */
-    public function show(productionManage $productionManage)
+    public function show($id)
     {
-        //
+        $production = productionManage::find($id);
+        return view('productionManages.show')->with('productionManages',$production);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\productionManage  $productionManage
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(productionManage $productionManage)
+    public function edit($id)
     {
-        //
+        $production = productionManage::find($id);
+        return view('productionManages.edit')->with('productionManages',$production);
+        
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\productionManage  $productionManage
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, productionManage $productionManage)
+    public function update(Request $request, $id)
     {
-        //
+        $production =productionManage::find($id);
+        $input = $request->all();
+        $production->update($input);
+        return redirect('productionManages')->with('flash_message', 'Production Updated!');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\productionManage  $productionManage
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(productionManage $productionManage)
+    public function destroy($id)
     {
-        //
+        productionManage::destroy($id);
+        return redirect('productionManages')->with('flash_message', 'production deleted!');  
     }
 }

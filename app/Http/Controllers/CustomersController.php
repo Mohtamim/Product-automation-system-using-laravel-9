@@ -8,79 +8,49 @@ use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function index()
     {
-        //
+       $customer= customers::all();
+       return view('customer.index')->with('customers', $customer);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('customer.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        customers::create($input);
+        return redirect('customers')->with('flash_message','Customer Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\customers  $customers
-     * @return \Illuminate\Http\Response
-     */
-    public function show(customers $customers)
+    public function show($id)
     {
-        //
+        $customer = customers::find($id);
+        return view('customer.show')->with('customers',$customer);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\customers  $customers
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(customers $customers)
+    public function edit($id)
     {
-        //
+        $customer = customers::find($id);
+        return view('customer.edit')->with('customers',$customer);
+        
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\customers  $customers
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, customers $customers)
+    public function update(Request $request, $id)
     {
-        //
+        $customers = customers::find($id);
+        $input = $request->all();
+        $customers->update($input);
+        return redirect('customers')->with('flash_message', 'customer Updated!');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\customers  $customers
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(customers $customers)
+    public function destroy($id)
     {
-        //
+       customers::destroy($id);
+        return redirect('customers')->with('flash_message', 'customer deleted!');  
     }
 }
