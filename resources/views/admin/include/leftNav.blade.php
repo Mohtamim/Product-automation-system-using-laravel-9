@@ -34,7 +34,7 @@
                 <li><a href="app-contacts.blade.php"><i class="fa fa-address-book"></i> <span>Contacts</span></a></li>
                 <li><a href="app-scrumboard.blade.php"><i class="fa fa-tasks"></i> <span>Scrumboard</span></a></li>
                 <li><a href="page-news.blade.php"><i class="fa fa-globe"></i> <span>Blog</span></a></li>
-                <li><a href="page-social.blade.php"><i class="fa fa-share-alt-square"></i> <span>Social</span></a></li>
+                <li><a href="{{url('admin/admin-cost')}}"><i class="fa fa-share-alt-square"></i> <span>Admin Cost</span></a></li>
                 <li class="header">Vendors</li>
                 <li>
                     <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>ui Elements</span></a>

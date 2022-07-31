@@ -9,7 +9,7 @@
                     </div>
 
                     <div class="card-body">
-                        <a href="{{url('admin-cost/adminCostTypeCreate')}}" class="btn btn-success btn-sm" title="Add new Student">
+                        <a href="{{url('admin/admin-cost/create')}}" class="btn btn-success btn-sm" title="Add new Student">
                             Add New
                         </a><br><br>
                         @if (session('flash_message'))

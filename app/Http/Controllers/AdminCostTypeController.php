@@ -14,13 +14,13 @@ class AdminCostTypeController extends Controller
        return view('admin.AdminCostType.adminCostTypeList')->with('adminCostType', $adminCostType);
     }
 
-    
+
     public function create()
     {
-        return view('admin.adminCostType.adminCostTypeCreate');
+        return view('admin.AdminCostType.adminCostTypeCreate');
     }
 
-    
+
     public function store(Request $request)
     {
         $input= $request->all();
@@ -28,7 +28,7 @@ class AdminCostTypeController extends Controller
         return redirect('admin/admin-cost')->with('flash_message','adminCostType Added');
     }
 
-    
+
     public function show($id)
     {
         $adminCostType = adminCostType::find($id);
@@ -47,7 +47,7 @@ class AdminCostTypeController extends Controller
         return view('admin.AdminCostType.adminCostTypeEdit')->with('adminCostType',$adminCostType);
     }
 
-   
+
     public function update(Request $request, $id)
     {
         $adminCostType = adminCostType::find($id);
@@ -56,7 +56,7 @@ class AdminCostTypeController extends Controller
         return redirect('admin/admin-cost')->with('flash_message', 'Unite Type Updated!');
     }
 
-    
+
 
     public function destroy($id)
     {
