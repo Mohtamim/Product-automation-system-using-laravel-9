@@ -8,79 +8,49 @@ use Illuminate\Http\Request;
 
 class ProductSaleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function index()
     {
-        //
+       $product= productSale::all();
+       return view('productSale.index')->with('productSales', $product);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('productSale.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        productSale::create($input);
+        return redirect('productSales')->with('flash_message','Product Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\productSale  $productSale
-     * @return \Illuminate\Http\Response
-     */
-    public function show(productSale $productSale)
+    public function show($id)
     {
-        //
+        $product = productSale::find($id);
+        return view('productSale.show')->with('productSales',$product);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\productSale  $productSale
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(productSale $productSale)
+    public function edit($id)
     {
-        //
+        $product = productSale::find($id);
+        return view('productSale.edit')->with('productSales',$product);
+        
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\productSale  $productSale
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, productSale $productSale)
+    public function update(Request $request, $id)
     {
-        //
+        $productSales = productSale::find($id);
+        $input = $request->all();
+        $productSales->update($input);
+        return redirect('productSales')->with('flash_message', 'product Updated!');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\productSale  $productSale
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(productSale $productSale)
+    public function destroy($id)
     {
-        //
+        productSale::destroy($id);
+        return redirect('productSales')->with('flash_message', 'product deleted!');  
     }
 }
