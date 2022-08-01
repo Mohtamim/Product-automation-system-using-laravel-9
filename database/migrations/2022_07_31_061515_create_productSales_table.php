@@ -17,10 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('selectCustomer');
             $table->string('selectProduct');
-            $table->decimal('productPrice,5,2');
+            $table->decimal('productPrice',10,2);
             $table->string('entryQuantity');
-            $table->decimal('totalAmount,5,2');
-            $table->timestamp('entryDate');
+            $table->decimal('totalAmount',10,2);
+            $table->date('entryDate');
+            $table->timestamps();
         });
     }
 

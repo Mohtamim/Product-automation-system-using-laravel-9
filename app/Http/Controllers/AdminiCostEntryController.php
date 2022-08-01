@@ -25,51 +25,35 @@ class AdminiCostEntryController extends Controller
     {
         $input= $request->all();
         adminiCostEntry::create($input);
-        return redirect('admin/cost-entry')->with('flash_message','adminCostType Added');
+        return redirect('admin/cost-entry')->with('flash_message','adminCostEntry Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\adminiCostEntry  $adminiCostEntry
-     * @return \Illuminate\Http\Response
-     */
-    public function show(adminiCostEntry $adminiCostEntry)
+    public function show($id)
     {
-        //
+        $adminCostEntry = adminiCostEntry::find($id);
+        return view('admin.AdminCostEntry.adminCostTypeShow')->with('adminCostEntry',$adminCostEntry);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\adminiCostEntry  $adminiCostEntry
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(adminiCostEntry $adminiCostEntry)
+
+    public function edit($id)
     {
-        //
+        $adminCostEntry = adminiCostEntry::find($id);
+        return view('admin.AdminCostEntry.adminCostEntryEdit')->with('adminCostEntry',$adminCostEntry);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\adminiCostEntry  $adminiCostEntry
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, adminiCostEntry $adminiCostEntry)
+
+    public function update(Request $request,$id)
     {
-        //
+        $adminCostEntry = adminiCostEntry::find($id);
+        $input = $request->all();
+        $adminCostEntry->update($input);
+        return redirect('admin/cost-entry')->with('flash_message', 'Unite Type Updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\adminiCostEntry  $adminiCostEntry
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(adminiCostEntry $adminiCostEntry)
+
+    public function destroy($id)
     {
-        //
+        adminiCostEntry::destroy($id);
+        return redirect('admin/cost-entry')->with('flash_message', 'admin Cost type  deleted!');
     }
 }

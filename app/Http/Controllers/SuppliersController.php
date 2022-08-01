@@ -39,7 +39,7 @@ class SuppliersController extends Controller
     {
         $input= $request->all();
         suppliers::create($input);
-        return redirect('suppliers')->with('flash_message','student Added');
+        return redirect('admin/suppliers')->with('flash_message','student Added');
     }
 
     /**
@@ -48,7 +48,7 @@ class SuppliersController extends Controller
      * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function show(suppliers $id)
+    public function show($id)
     {
         $suppliers = suppliers::find($id);
         return view('admin.suppliers.show')->with('suppliers',$suppliers);
@@ -60,7 +60,7 @@ class SuppliersController extends Controller
      * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function edit(suppliers $id)
+    public function edit($id)
     {
         $suppliers = suppliers::find($id);
         return view('admin.suppliers.edit')->with('suppliers',$suppliers);
@@ -73,9 +73,12 @@ class SuppliersController extends Controller
      * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, suppliers $suppliers)
+    public function update(Request $request, $id)
     {
-        //
+        $suppliers = suppliers::find($id);
+        $input = $request->all();
+        $suppliers->update($input);
+        return redirect('admin/suppliers')->with('flash_message', 'suppliers Updated!');
     }
 
     /**
@@ -84,8 +87,9 @@ class SuppliersController extends Controller
      * @param  \App\Models\suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(suppliers $suppliers)
+    public function destroy($id)
     {
-        //
+        suppliers::destroy($id);
+        return redirect('admin/suppliers')->with('flash_message', 'suppliers deleted!');
     }
 }

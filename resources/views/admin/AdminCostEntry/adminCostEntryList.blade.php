@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Admin Cost Entry List</h2>
+                        <h2 class="text-success h2 text-center font-weight-bold">Admin Cost Entry List</h2>
                     </div>
 
                     <div class="card-body">
@@ -44,7 +44,7 @@
                                         <td>
                                             <a href="{{url('admin/cost-entry/'.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('admin/cost-entry/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Student" aria-hidden="true"><i class="fa fa-pencil"></i></a>
-                                            <form method="POST" action="{{ url('admin/cost-entry' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('admin/cost-entry/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash" aria-hidden="true"></i></button>

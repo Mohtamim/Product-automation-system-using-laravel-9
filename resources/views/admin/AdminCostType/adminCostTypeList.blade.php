@@ -5,13 +5,14 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Admin Cost Type List</h2>
+                        <h2 class=" text-success h2 text-center font-weight-bold">Admin Cost Type List</h2>
                     </div>
 
                     <div class="card-body">
                         <a href="{{url('admin/admin-cost/create')}}" class="btn btn-success btn-sm" title="Add new Student">
                             Add New
-                        </a><br><br>
+                        </a>
+                        <br><br>
                         @if (session('flash_message'))
                         <div class="bg-danger text-white text-center">{{ session('flash_message')}}</div>
                         @elseif (session('added'))

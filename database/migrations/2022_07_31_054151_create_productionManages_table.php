@@ -20,8 +20,9 @@ return new class extends Migration
             $table->date('expiryDate');
             $table->string('selectProductName');
             $table->string('uniteType');
-            $table->decimal('productionQuantity',5,2);
+            $table->decimal('productionQuantity',10,2);
             $table->string('selectedMaterials');
+            $table->timestamps();
         });
     }
 
