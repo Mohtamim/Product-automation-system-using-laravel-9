@@ -32,7 +32,7 @@
                 <li><a href="{{url('admin/unit-type')}}"><i class="fa fa-th-list"></i> <span>Unit Type</span></a></li>
                 <li><a href="{{ url('admin/materials') }}"><i class="fa fa-folder"></i> <span>Materials</span></a></li>
                 <li><a href="{{ url('admin/products-sale') }}"><i class="fa fa-address-book"></i> <span>Sale</span></a></li>
-                <li><a href="app-scrumboard.blade.php"><i class="fa fa-tasks"></i> <span>Scrumboard</span></a></li>
+                <li><a href="{{ url('material-to-products') }}"><i class="fa fa-tasks"></i> <span>Materials Products</span></a></li>
                 <li><a href="page-news.blade.php"><i class="fa fa-globe"></i> <span>Blog</span></a></li>
                 <li><a href="{{url('admin/admin-cost')}}"><i class="fa fa-share-alt-square"></i> <span>Admin Cost</span></a></li>
                 <li class="header">Vendors</li>
