@@ -1,5 +1,5 @@
-@extends('students.layout')
-@section('content')
+@extends('admin.include.layout')
+@section('mainpart')
     <div class="container">
         <div class="row bg-red" style="margin:20px;">
             <div class="col-12">
@@ -8,7 +8,7 @@
                         <h2>Production Manage List</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{url('/productionManages/create')}}" class="btn btn-success btn-sm" title="Add new Production Manage">
+                        <a href="{{url('admin/productionManages/create')}}" class="btn btn-success btn-sm" title="Add new Production Manage">
                             Add New
                         </a><br><br>
                         <div class="table-responsive">
@@ -39,9 +39,9 @@
                                         <td>{{$item->productionQuantity}}</td>
                                         <td>{{$item->selectedMaterials}}</td>
                                         <td>
-                                            <a href="{{url('/productionManage/'.$item->id)}}" class="btn btn-info btn-sm" title="View Production Manage" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                                            <a href="{{url('/productionManage/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Production Manage" aria-hidden="true"><i class="fa fa-pencil"></i></a>
-                                            <form method="POST" action="{{ url('/productionManage/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <a href="{{url('admin/productionManage/'.$item->id)}}" class="btn btn-info btn-sm" title="View Production Manage" aria-hidden="true"><i class="fa fa-eye"></i></a>
+                                            <a href="{{url('admin/productionManage/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Production Manage" aria-hidden="true"><i class="fa fa-pencil"></i></a>
+                                            <form method="POST" action="{{ url('admin/productionManage/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Products" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash" aria-hidden="true"></i></button>
