@@ -11,7 +11,8 @@
                     <div class="card-body">
                         <a href="{{url('admin/admin-cost/create')}}" class="btn btn-success btn-sm" title="Add new Student">
                             Add New
-                        </a><br><br>
+                        </a>
+                        <br><br>
                         @if (session('flash_message'))
                         <div class="bg-danger text-white text-center">{{ session('flash_message')}}</div>
                         @elseif (session('added'))

@@ -16,7 +16,7 @@
                             <label class="control-label">Expense Code</label><br>
                             <input type="number" name="expenseCode" id="expenseCode" class="form-control"><br>
                             <input type="submit" value="save" class="btn btn-success">
-
+                            <a href="{{ url('admin/admin-cost') }}" class="btn btn-danger btn-small" >Cancel</a>
                         </form>
                       </div>
                 </div>

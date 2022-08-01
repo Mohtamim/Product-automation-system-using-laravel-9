@@ -17,7 +17,8 @@
                             <input type="text" name="expenseHeadName" id="expenseHeadName" class="form-control" value="{{ $adminCostType->expenseHeadName }}"><br>
                             <label class="control-label">ExpenseCode</label><br>
                             <input type="text" name="expenseCode" id="expenseCode" class="form-control" value="{{ $adminCostType->expenseCode }}"><br>
-                            <input type="submit" value="update" class="btn btn-success">
+                            <input type="submit" value="update" class="btn btn-success btn-sm">
+                            <a href="{{ url('admin/admin-cost') }}" class="btn btn-info btn-sm me-5" >Back to List</a>
                         </form>
                       </div>
                 </div>

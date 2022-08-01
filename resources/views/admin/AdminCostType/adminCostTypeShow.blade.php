@@ -6,6 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h2 class=" text-success h2 text-center font-weight-bold">AdminCostType Details</h2>
+                        <a href="{{ url('admin/admin-cost') }}" class="btn btn-info btn-sm me-5" >Back to List</a>
                     </div>
 
                       <div class="card-body">

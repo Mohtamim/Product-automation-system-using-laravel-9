@@ -6,6 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h2 class=" text-success h2 text-center font-weight-bold">AdminCostEntry Details</h2>
+                        <a href="{{ url('admin/cost-entry') }}" class="btn btn-primary btn-small text-center" >Back to List</a>
                     </div>
 
                       <div class="card-body">
@@ -14,6 +15,7 @@
                         <p class="card-text">ExpenseDate: {{ $adminCostEntry->expenseDate }}</p>
                         <p class="card-text">Note: {{ $adminCostEntry->note }}</p>
                       </div>
+
                 </div>
             </div>
 
