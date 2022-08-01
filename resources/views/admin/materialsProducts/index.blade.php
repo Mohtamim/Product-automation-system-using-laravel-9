@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Product List</h2>
+                        <h2 class=" text-success h2 text-center font-weight-bold">Product List</h2>
                     </div>
 
                     <div class="card-body">
@@ -35,7 +35,7 @@
                                 </thead>
                                 <tbody>
 
-                                    @foreach ($materialsProducts as $item )
+                                    @foreach ($products as $item )
 
                                     <tr>
                                         <td>{{$loop->iteration}}</td>

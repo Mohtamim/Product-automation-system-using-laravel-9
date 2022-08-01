@@ -28,13 +28,9 @@ class MaterialsProductController extends Controller
         return redirect('admin/material-to-products')->with('flash_message','product Added');
     }
 
-<<<<<<< HEAD
-    
-    public function show($id)
-=======
 
-    public function show(materialsProduct $id)
->>>>>>> 1e7d0fbc7bc392932b3150f58d2fd59b3eaca2a0
+
+    public function show($id)
     {
         $materialsProduct = materialsProduct::find($id);
         return view('admin.materialsProducts.materialsProduct_Show')->with('products',$materialsProduct);
@@ -44,7 +40,7 @@ class MaterialsProductController extends Controller
     public function edit($id)
     {
         $materialsProduct = materialsProduct::find($id);
-        return view('admin.materials.edit')->with('materialsProduct', $materialsProduct);
+        return view('admin.materialsProducts.edit')->with('materialsProduct', $materialsProduct);
     }
 
 
@@ -53,16 +49,13 @@ class MaterialsProductController extends Controller
         $materialsProduct = materialsProduct::find($id);
         $input =$request->all();
         $materialsProduct->update($input);
-        return redirect('admin/material-to-products/')->with('flash_massage','products updated!!');
+        return redirect('admin/material-to-products')->with('flash_massage','products updated!!');
     }
 
-<<<<<<< HEAD
-   
-    public function destroy($id)
-=======
 
-    public function destroy(materialsProduct $id)
->>>>>>> 1e7d0fbc7bc392932b3150f58d2fd59b3eaca2a0
+
+    public function destroy($id)
+
     {
         materialsProduct::destroy($id);
         return redirect('admin/material-to-products/')->with('flash_massage','Product Deleted');
