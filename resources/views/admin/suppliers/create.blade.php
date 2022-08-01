@@ -1,5 +1,5 @@
-@extends('')
-@section('')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,7 +9,7 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('suppliers')}}" method="post" class="form">
+                        <form action="{{url('admin/suppliers')}}" method="post" class="form">
                             {!! csrf_field() !!}
 
                             <label class="control-label">Supplier Name</label><br>
@@ -28,7 +28,7 @@
                             <input type="text" name="address" id="address" class="form-control"><br>
 
                             <label class="control-label">Update Balance</label><br>
-                            <input type="text" name="updateBalance" id="updateBalance" class="form-control"><br>
+                            <input type="number" step="any" name="updateBalance" id="updateBalance" class="form-control"><br>
 
                             <input type="submit" value="save" class="btn btn-success">
 
