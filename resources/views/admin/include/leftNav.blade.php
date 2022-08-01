@@ -24,7 +24,7 @@
         <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul id="main-menu" class="metismenu animation-li-delay">
                 <li class="header">Main</li>
-                <li class="active"><a href="index.blade.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                <li class="active"><a href="{{ url('admin/') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li class="header">Apps</li>
                 <li><a href="{{ url('admin/products') }}"><i class="fa-brands fa-product-hunt"></i> <span>Prodtucs</span> <span class="badge badge-default mr-0">12</span></a></li>
                 <li><a href="{{ url('admin/suppliers') }}"><i class="fas fa-industry"></i> <span>Suppliers</span></a></li>
