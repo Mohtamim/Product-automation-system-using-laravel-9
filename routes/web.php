@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     });
     Route::resource('customers',CustomersController::class);
     Route::resource('admin-cost',AdminCostTypeController::class);
-    Route::resource('costentry',AdminiCostEntryController::class);
+    Route::resource('cost-entry',AdminiCostEntryController::class);
     Route::resource('material-to-products',MaterialsProductController::class);
     Route::resource('production-manage',ProductionManageController::class);
     Route::resource('products-making',ProductMakingController::class);
