@@ -10,7 +10,7 @@
 
                       <div class="card-body">
                         <form action="{{ url('admin/products/' .$products->id) }}" method="post">
-                            {!! csrf_field() !!}
+                            {!! csrf_field() !!} 
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$products->id}}" />
                             <label class="control-label">Products</label><br>

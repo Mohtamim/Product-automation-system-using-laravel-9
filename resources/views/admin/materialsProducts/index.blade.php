@@ -35,7 +35,7 @@
                                 </thead>
                                 <tbody>
 
-                                    @foreach ($materialsProducts as $item )
+                                    @foreach ($products as $item )
 
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
