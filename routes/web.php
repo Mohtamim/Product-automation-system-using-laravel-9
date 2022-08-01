@@ -36,12 +36,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('admin-cost',AdminCostTypeController::class);
     Route::resource('cost-entry',AdminiCostEntryController::class);
     Route::resource('material-to-products',MaterialsProductController::class);
-    Route::resource('materials',MaterialsController::class);
-    Route::resource('suppliers',SuppliersController::class);
+    Route::resource('materials',MaterialsController::class); // CRUD by Rayhan Rimon
+    Route::resource('suppliers',SuppliersController::class); // CRUD by Rayhan Rimon
     Route::resource('production-manage',ProductionManageController::class);
     Route::resource('products-making',ProductMakingController::class);
     Route::resource('products-sale',ProductSaleController::class);
-    Route::resource('unit-type',UniteTypeController::class);
+    Route::resource('unit-type',UniteTypeController::class); // CRUD by Rayhan Rimon
     Route::resource('products',ProductsController::class);
 
 });
