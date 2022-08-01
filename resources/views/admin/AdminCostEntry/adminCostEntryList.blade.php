@@ -9,7 +9,7 @@
                     </div>
 
                     <div class="card-body">
-                        <a href="{{url('')}}" class="btn btn-success btn-sm" title="Add new Student">
+                        <a href="{{url('admin/cost-entry/create')}}" class="btn btn-success btn-sm" title="Add new Student">
                             Add New
                         </a><br><br>
                         @if (session('flash_message'))
@@ -33,7 +33,7 @@
                                 </thead>
                                 <tbody>
 
-                                    @foreach ($products as $item )
+                                    @foreach ($adminCostEntry as $item )
 
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
@@ -42,9 +42,9 @@
                                         <td>{{$item->expenseDate}}</td>
                                         <td>{{$item->note}}</td>
                                         <td>
-                                            <a href="{{url('//'.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                                            <a href="{{url('//'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Student" aria-hidden="true"><i class="fa fa-pencil"></i></a>
-                                            <form method="POST" action="{{ url('/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <a href="{{url('admin/cost-entry/'.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a>
+                                            <a href="{{url('admin/cost-entry/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Student" aria-hidden="true"><i class="fa fa-pencil"></i></a>
+                                            <form method="POST" action="{{ url('admin/cost-entry' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash" aria-hidden="true"></i></button>

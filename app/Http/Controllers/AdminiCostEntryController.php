@@ -8,35 +8,24 @@ use Illuminate\Http\Request;
 
 class AdminiCostEntryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $adminCostEntry= adminiCostEntry::all();
+        return view('admin.AdminCostEntry.adminCostEntryList')->with('adminCostEntry', $adminCostEntry);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('admin.AdminCostEntry.adminCostEntryCreate');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $input= $request->all();
+        adminiCostEntry::create($input);
+        return redirect('admin/cost-entry')->with('flash_message','adminCostType Added');
     }
 
     /**

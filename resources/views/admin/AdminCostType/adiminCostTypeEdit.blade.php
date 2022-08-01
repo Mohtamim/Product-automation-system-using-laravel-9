@@ -9,7 +9,7 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{ url('/' .$adminCostType->id) }}" method="post">
+                        <form action="{{ url('admin/admin-cost/'.$adminCostType->id) }}" method="post">
                             {!! csrf_field() !!}
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$adminCostType->id}}" />

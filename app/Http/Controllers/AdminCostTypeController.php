@@ -32,7 +32,7 @@ class AdminCostTypeController extends Controller
     public function show($id)
     {
         $adminCostType = adminCostType::find($id);
-        return view('admin.adminCostTypeshow')->with('uniteType',$adminCostType);
+        return view('admin.AdminCostType.adminCostTypeShow')->with('adminCostType',$adminCostType);
     }
 
     /**
@@ -44,7 +44,7 @@ class AdminCostTypeController extends Controller
     public function edit($id)
     {
         $adminCostType = adminCostType::find($id);
-        return view('admin.AdminCostType.adminCostTypeEdit')->with('adminCostType',$adminCostType);
+        return view('admin.AdminCostType.adiminCostTypeEdit')->with('adminCostType',$adminCostType);
     }
 
 

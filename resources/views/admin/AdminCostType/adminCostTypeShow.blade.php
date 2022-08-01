@@ -1,5 +1,5 @@
-@extends('')
-@section('content')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,8 +9,8 @@
                     </div>
 
                       <div class="card-body">
-                        <h5 class="card-title">expenseHeadName: {{ $students->expenseHeadName }}</h5>
-                        <p class="card-text">expenseCode: {{ $students->expenseCode }}</p>
+                        <h5 class="card-title">expenseHeadName: {{ $adminCostType->expenseHeadName }}</h5>
+                        <p class="card-text">expenseCode: {{ $adminCostType->expenseCode }}</p>
                       </div>
                 </div>
             </div>

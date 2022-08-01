@@ -1,5 +1,5 @@
-@extends('AdminCostType.layout')
-@section('content')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,12 +9,12 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('')}}" method="post" class="form">
+                        <form action="{{url('admin/cost-entry')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Expense Head Name</label><br>
                             <input type="text" name="expenseHeadName" id="expenseHeadName" class="form-control"><br>
                             <label class="control-label">ExpenseAmount</label><br>
-                            <input type="text" name="expenseAmount" id="expenseAmount" class="form-control"><br>
+                            <input type="number" name="expenseAmount" id="expenseAmount" class="form-control"><br>
                             <label class="control-label">ExpenseDate</label><br>
                             <input type="Date" name="expenseDate" id="expenseDate" class="form-control"><br>
                             <label class="control-label">Note</label><br>

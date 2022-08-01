@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('admini_cost_entries', function (Blueprint $table) {
             $table->id();
+            $table->string('expenseHeadName');
             $table->double('expenseAmount', 10, 2);//ekhane bigInteger/float use hobe naki decimal correction me
             $table->timestamp('expenseDate');
             $table->string('note');
