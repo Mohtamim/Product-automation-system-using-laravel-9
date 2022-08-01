@@ -39,7 +39,7 @@ class MaterialsController extends Controller
     {
         $input= $request->all();
         materials::create($input);
-        return redirect('materials')->with('flash_message','Materials Added');
+        return redirect('admin/materials')->with('flash_message','Materials Added');
 
     }
 
@@ -49,7 +49,7 @@ class MaterialsController extends Controller
      * @param  \App\Models\materials  $materials
      * @return \Illuminate\Http\Response
      */
-    public function show(materials $id)
+    public function show($id)
     {
         $materials = materials::find($id);
         return view('admin.materials.show')->with('materials',$materials);
@@ -61,7 +61,7 @@ class MaterialsController extends Controller
      * @param  \App\Models\materials  $materials
      * @return \Illuminate\Http\Response
      */
-    public function edit(materials $id)
+    public function edit($id)
     {
         $materials = materials::find($id);
         return view('admin.materials.edit')->with('materials',$materials);
@@ -74,12 +74,12 @@ class MaterialsController extends Controller
      * @param  \App\Models\materials  $materials
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, materials $id)
+    public function update(Request $request,$id)
     {
         $materials = materials::find($id);
         $input = $request->all();
         $materials->update($input);
-        return redirect('materials')->with('flash_message', 'Materials Updated!');
+        return redirect('admin/materials')->with('flash_message', 'Materials Updated!');
     }
 
     /**
@@ -88,9 +88,9 @@ class MaterialsController extends Controller
      * @param  \App\Models\materials  $materials
      * @return \Illuminate\Http\Response
      */
-    public function destroy(materials $id)
+    public function destroy($id)
     {
         materials::destroy($id);
-        return redirect('materials')->with('flash_message', 'Materials deleted!');
+        return redirect('admin/materials')->with('flash_message', 'Materials deleted!');
     }
 }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('materialsCode');
             $table->string('materialsUnite');
             $table->string('materialsUnitePrice');
-            $table->decimal('updateStock', 5,2);
+            $table->decimal('updateStock', 10,2);
             $table->timestamps();
         });
     }

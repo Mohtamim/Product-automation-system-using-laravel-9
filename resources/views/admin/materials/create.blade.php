@@ -9,7 +9,7 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('materials')}}" method="post" class="form">
+                        <form action="{{url('admin/materials')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Materials Name</label><br>
                             <input type="text" name="materialsName" id="materialsName" class="form-control"><br>
@@ -24,10 +24,10 @@
                             <input type="text" name="materialsUnitePrice" id="materialsUnitePrice" class="form-control"><br>
 
                             <label class="control-label">Update Stock</label><br>
-                            <input type="decemal" name="updateStock" id="updateStock" class="form-control"><br>
+                            <input type="number" step="any" name="updateStock" id="updateStock" class="form-control"><br>
 
                             <input type="submit" value="save" class="btn btn-success">
-                            <input type="cancel" value="cancel" class="btn btn-danger">
+
 
                         </form>
                       </div>
