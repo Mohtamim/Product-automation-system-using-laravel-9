@@ -17,7 +17,8 @@ class productSale extends Model
                 'entryQuantity',
                 'totalAmount',
                 'entryDate'
-                
-                
+
+
     ];
+    public $timestamps = false;
 }
