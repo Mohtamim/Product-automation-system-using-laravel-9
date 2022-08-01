@@ -1,5 +1,5 @@
-@extends('products.layout')
-@section('content')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,12 +9,12 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('')}}" method="post" class="form">
+                        <form action="{{url('admin/material-to-products')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Supplier</label><br>
-                            <input type="text" name="supplier" id="supplier" class="form-control"><br>
+                            <input type="text" name="selectSupplier" id="selectSupplier" class="form-control"><br>
                             <label class="control-label">Materials</label><br>
-                            <input type="text" name="materials" id="materials" class="form-control"><br>
+                            <input type="text" name="selectMaterials" id="selectMaterials" class="form-control"><br>
                             <label class="control-label">Unite Type</label><br>
                             <input type="number" name="uniteType" id="uniteType" class="form-control"><br>
                             <label class="control-label">Unite Price</label><br>

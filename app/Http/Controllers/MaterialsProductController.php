@@ -8,41 +8,41 @@ use Illuminate\Http\Request;
 
 class MaterialsProductController extends Controller
 {
-    
+
     public function index()
     {
         $materialsProducts = materialsProduct::all();
-        return view('admin.materialsProducts.index')->with('materialsProducts', $materialsProducts);
+        return view('admin.materialsProducts.index')->with('products', $materialsProducts);
     }
 
-    
+
     public function create()
     {
-        return view('admin/materialsProducts.create');
+        return view('admin.materialsProducts.create');
     }
 
     public function store(Request $request)
     {
         $input= $request->all();
         materialsProduct::create($input);
-        return redirect('materialsProduct')->with('flash_message','product Added');
+        return redirect('admin/material-to-products')->with('flash_message','product Added');
     }
 
-    
+
     public function show(materialsProduct $id)
     {
         $materialsProduct = materialsProduct::find($id);
         return view('materialsProduct.materialsProduct_Show')->with('products',$materialsProduct);
     }
 
-    
+
     public function edit($id)
     {
         $materialsProduct = materialsProduct::find($id);
         return view('materialsProduct.edit')->with('materialsProduct', $materialsProduct);
     }
 
-    
+
     public function update(Request $request, $id)
     {
         $materialsProduct = materialsProduct::find($id);
@@ -51,7 +51,7 @@ class MaterialsProductController extends Controller
         return redirect('materialsProduct')->with('flash_massage','products updated!!');
     }
 
-   
+
     public function destroy(materialsProduct $id)
     {
         materialsProduct::destroy($id);

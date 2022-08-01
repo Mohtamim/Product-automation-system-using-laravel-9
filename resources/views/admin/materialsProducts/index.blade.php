@@ -28,7 +28,9 @@
                                         <th>Materials</th>
                                         <th>Unite Type</th>
                                         <th>Unite Price</th>
+                                        <th>Quantity</th>
                                         <th>Total Price</th>
+                                        <th>Entry Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,7 +40,7 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$item->selectSupplier}}</td>
-                                        <td>{{$item->selectMarerials}}</td>
+                                        <td>{{$item->selectMaterials}}</td>
                                         <td>{{$item->uniteType}}</td>
                                         <td>{{$item->unitePrice}}</td>
                                         <td>{{$item->quantity}}</td>

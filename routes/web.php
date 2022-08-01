@@ -31,7 +31,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/',function(){
         return view('admin.include.index');
-    });
+    })->name('adminHome');
     Route::resource('customers',CustomersController::class);
     Route::resource('admin-cost',AdminCostTypeController::class);
     Route::resource('cost-entry',AdminiCostEntryController::class);

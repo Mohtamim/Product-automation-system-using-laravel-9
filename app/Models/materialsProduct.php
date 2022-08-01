@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class materialsProduct extends Model
 {
     use HasFactory;
-    protected $table ='materialsProduct';
+    protected $table ='materials_products';
     protected $primarykey ='id';
     protected $fillable =[
                 'selectSupplier',
+                'selectMaterials',
                 'uniteType',
                 'unitePrice',
                 'quantity',
