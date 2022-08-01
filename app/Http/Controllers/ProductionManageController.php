@@ -11,13 +11,13 @@ class ProductionManageController extends Controller
 
     public function index()
     {
-       $production= productionManage::all();
-       return view('admin.production-manage.index')->with('productionManages', $production);
+       $productionManages= productionManage::all();
+       return view('admin.productionManage.index')->with('productionManages', $productionManages);
     }
 
     public function create()
     {
-        return view('admin.production-manage.create');
+        return view('admin.productionManage.create');
     }
 
 
@@ -25,19 +25,19 @@ class ProductionManageController extends Controller
     {
         $input= $request->all();
         productionManage::create($input);
-        return redirect('admin.production-manage.store')->with('flash_message','production Added');
+        return redirect('admin/production-manage')->with('flash_message','production Added');
     }
 
     public function show($id)
     {
         $production = productionManage::find($id);
-        return view('admin.production-manage.show')->with('productionManages',$production);
+        return view('admin.productionManage.show')->with('productionManages',$production);
     }
 
     public function edit($id)
     {
         $production = productionManage::find($id);
-        return view('admin.production-manage.edit')->with('productionManages',$production);
+        return view('admin.productionManage.edit')->with('productionManage',$production);
 
     }
 
@@ -46,11 +46,11 @@ class ProductionManageController extends Controller
         $production =productionManage::find($id);
         $input = $request->all();
         $production->update($input);
-        return redirect('admin.production-manage.update')->with('flash_message', 'Production Updated!');
+        return redirect('admin/production-manage')->with('flash_message', 'Production Updated!');
     }
     public function destroy($id)
     {
         productionManage::destroy($id);
-        return redirect('admin.production-manage.destroy')->with('flash_message', 'production deleted!');
+        return redirect('admin/production-manage')->with('flash_message', 'production deleted!');
     }
 }

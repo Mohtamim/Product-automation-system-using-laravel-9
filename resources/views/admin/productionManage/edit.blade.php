@@ -5,11 +5,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Edit Production manage Report</h2>
+                        <h2 class="text-success h2 text-center font-weight-bold">Edit Production manage Report</h2>
                     </div>
 
                       <div class="card-body">
-                        <form action="{{ url('admin/productionManages/' .$productionManage->id) }}" method="post">
+                        <form action="{{ url('admin/production-manage/' .$productionManage->id) }}" method="post">
                             {!! csrf_field() !!}
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$productionManage->id}}" />
@@ -28,6 +28,7 @@
                             <label class="control-label">Selected Materials</label><br>
                             <input type="text" name="selectedMaterials" id="selectedMaterials" class="form-control" value="{{ $productionManage->selectedMaterials }}"> <br>
                             <input type="submit" value="update" class="btn btn-success">
+                            <a href="{{ url('admin/production-manage') }}" class="btn btn-danger btn-small" >Cancel</a>
 
                         </form>
                       </div>

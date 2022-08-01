@@ -5,11 +5,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Create New Production Manage</h2>
+                        <h2 class="text-success h2 text-center font-weight-bold">Create New Production Manage</h2>
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('admin/productionManages')}}" method="post" class="form">
+                        <form action="{{url('admin/production-manage')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Entry Date</label><br>
                             <input type="date" name="entryDate" id="entryDate" class="form-control"><br>
@@ -26,6 +26,7 @@
                             <label class="control-label">Selected Materials</label><br>
                             <input type="text" name="selectedMaterials" id="selectedMaterials" class="form-control"><br>
                             <input type="submit" value="save" class="btn btn-success">
+                            <a href="{{ url('admin/production-manage') }}" class="btn btn-danger btn-small" >Cancel</a>
 
                         </form>
                       </div>

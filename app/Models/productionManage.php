@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class productionManage extends Model
 {
     use HasFactory;
-    protected $table ='productionManage';
+    protected $table ='productionManages';
     protected $primarykey ='id';
     protected $fillable =[
                 'entryDate',
