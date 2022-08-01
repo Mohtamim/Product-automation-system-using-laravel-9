@@ -37,9 +37,9 @@
                                         <td>{{$item->totalAmount}}</td>
                                         <td>{{$item->entryDate}}</td>
                                         <td>
-                                            <a href="{{url('admin/productSale/'.$item->id)}}" class="btn btn-info btn-sm" title="View Product" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                                            <a href="{{url('admin/productSale/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit product" aria-hidden="true"><i class="fa fa-pencil"></i></a>
-                                            <form method="POST" action="{{ url('admin/productSale/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <a href="{{url('admin/products-sale/'.$item->id)}}" class="btn btn-info btn-sm" title="View Product" aria-hidden="true"><i class="fa fa-eye"></i></a>
+                                            <a href="{{url('admin/products-sale/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit product" aria-hidden="true"><i class="fa fa-pencil"></i></a>
+                                            <form method="POST" action="{{ url('admin/products-sale/'. $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Products" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash" aria-hidden="true"></i></button>

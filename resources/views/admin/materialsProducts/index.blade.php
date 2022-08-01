@@ -28,6 +28,7 @@
                                         <th>Materials</th>
                                         <th>Unite Type</th>
                                         <th>Unite Price</th>
+                                        <th>Quantity</th>
                                         <th>Total Price</th>
                                         <th>Entry Date</th>
                                     </tr>

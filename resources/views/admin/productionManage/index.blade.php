@@ -8,7 +8,7 @@
                         <h2>Production Manage List</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{url('admin/productionManage/create')}}" class="btn btn-success btn-sm" title="Add new Production Manage">
+                        <a href="{{url('admin/production-manage/create')}}" class="btn btn-success btn-sm" title="Add new Production Manage">
                             Add New
                         </a><br><br>
                         <div class="table-responsive">

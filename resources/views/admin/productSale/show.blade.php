@@ -9,12 +9,12 @@
                     </div>
 
                       <div class="card-body">
-                        <h5 class="card-title">Customer: {{ $productSale->selectCustomer }}</h5>
-                        <p class="card-text">Product: {{ $productSale->selectProduct }}</p>
-                        <p class="card-text">Price: {{ $productSale->productPrice }}</p>
-                        <p class="card-text">Quantity: {{ $productSale->entryQuantity }}</p>
-                        <p class="card-text">Total Amount: {{ $productSale->totalAmount }}</p>
-                        <p class="card-text">Date: {{ $productSale->entryDate }}</p>
+                        <h5 class="card-title">Customer: {{ $productSales->selectCustomer }}</h5>
+                        <p class="card-text">Product: {{ $productSales->selectProduct }}</p>
+                        <p class="card-text">Price: {{ $productSales->productPrice }}</p>
+                        <p class="card-text">Quantity: {{ $productSales->entryQuantity }}</p>
+                        <p class="card-text">Total Amount: {{ $productSales->totalAmount }}</p>
+                        <p class="card-text">Date: {{ $productSales->entryDate }}</p>
                       </div>
                 </div>
             </div>

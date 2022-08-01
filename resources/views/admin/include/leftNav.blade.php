@@ -24,17 +24,17 @@
         <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul id="main-menu" class="metismenu animation-li-delay">
                 <li class="header">Main</li>
-                <li class="active"><a href="{{ url('admin/') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                <li class="{{ Route::is('admin.adminHome') ? 'active' : '' }}"><a href="{{ url('admin/') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li class="header">Apps</li>
-                <li><a href="{{ url('admin/products') }}"><i class="fa-brands fa-product-hunt"></i> <span>Prodtucs</span> <span class="badge badge-default mr-0">12</span></a></li>
-                <li><a href="{{ url('admin/suppliers') }}"><i class="fas fa-industry"></i> <span>Suppliers</span></a></li>
-                <li><a href="{{url('admin/customers')}}"><i class="fa fa-users" aria-hidden="true"></i> <span>Customers</span></a></li>
-                <li><a href="{{url('admin/unit-type')}}"><i class="fa fa-th-list"></i> <span>Unit Type</span></a></li>
-                <li><a href="{{ url('admin/materials') }}"><i class="fa fa-folder"></i> <span>Materials</span></a></li>
-                <li><a href="{{ url('admin/products-sale') }}"><i class="fa fa-address-book"></i> <span>Sale</span></a></li>
-                <li><a href="{{ url('admin/material-to-products') }}"><i class="fa fa-tasks"></i> <span>Materials Products</span></a></li>
-                <li><a href="{{ url('admin/production-manage') }}"><i class="fa fa-globe"></i> <span>Production Manage</span></a></li>
-                <li><a href="{{url('admin/admin-cost')}}"><i class="fa fa-share-alt-square"></i> <span>Admin Cost</span></a></li>
+                <li class="{{ Route::is('admin.products*') ? 'active' : '' }}"><a href="{{ url('admin/products') }}"><i class="fa-brands fa-product-hunt"></i> <span>Prodtucs</span> <span class="badge badge-default mr-0"></span></a></li>
+                <li class="{{ Route::is('admin.suppliers*') ? 'active' : '' }}"><a href="{{ url('admin/suppliers') }}"><i class="fas fa-industry"></i> <span>Suppliers</span></a></li>
+                <li class="{{ Route::is('admin.customers*') ? 'active' : '' }}"><a href="{{url('admin/customers')}}"><i class="fa fa-users" aria-hidden="true"></i> <span>Customers</span></a></li>
+                <li class="{{ Route::is('admin.unit-type*') ? 'active' : '' }}"><a href="{{url('admin/unit-type')}}"><i class="fa fa-th-list"></i> <span>Unit Type</span></a></li>
+                <li class="{{ Route::is('admin.materials*') ? 'active' : '' }}"><a href="{{ url('admin/materials') }}"><i class="fa fa-folder"></i> <span>Materials</span></a></li>
+                <li class="{{ Route::is('admin.products-sale*') ? 'active' : '' }}"><a href="{{ url('admin/products-sale') }}"><i class="fa fa-address-book"></i> <span>Sale</span></a></li>
+                <li class="{{ Route::is('admin.material-to-products*') ? 'active' : '' }}"><a href="{{ url('admin/material-to-products') }}"><i class="fa fa-tasks"></i> <span>Materials Products</span></a></li>
+                <li class="{{ Route::is('admin.production-manage*') ? 'active' : '' }}"><a href="{{ url('admin/production-manage') }}"><i class="fa fa-globe"></i> <span>Production Manage</span></a></li>
+                <li class="{{ Route::is('admin.admin-cost*') ? 'active' : '' }}"><a href="{{url('admin/admin-cost')}}"><i class="fa fa-share-alt-square"></i> <span>Admin Cost</span></a></li>
                 <li class="header">Vendors</li>
                 <li>
                     <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>ui Elements</span></a>

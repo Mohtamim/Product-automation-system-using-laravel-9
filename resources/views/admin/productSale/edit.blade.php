@@ -9,22 +9,22 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{ url('admin.products-sale/' .$productSale->id) }}" method="post">
+                        <form action="{{ url('admin/products-sale'.$productSales->id) }}" method="post">
                             {!! csrf_field() !!}
                             @method("PATCH")
-                            <input type="hidden" name="id" id="id" value="{{$productSale->id}}" />
+                            <input type="hidden" name="id" id="id" value="{{$productSales->id}}" />
                             <label class="control-label">Customer</label><br>
-                            <input type="text" name="selectCustomer" id="selectCustomer" class="form-control" value="{{ $productSale->selectCustomer }}"><br>
+                            <input type="text" name="selectCustomer" id="selectCustomer" class="form-control" value="{{ $productSales->selectCustomer }}"><br>
                             <label class="control-label">Products</label><br>
-                            <input type="text" name="selectProduct" id="selectProduct" class="form-control" value="{{ $productSale->selectProduct }}"><br>
+                            <input type="text" name="selectProduct" id="selectProduct" class="form-control" value="{{ $productSales->selectProduct }}"><br>
                             <label class="control-label">Product Price</label><br>
-                            <input type="number" name="productPrice" id="productPrice" class="form-control" value="{{ $productSale->productPrice }}"><br>
+                            <input type="number" name="productPrice" id="productPrice" class="form-control" value="{{ $productSales->productPrice }}"><br>
                             <label class="control-label">Entry Quantity</label><br>
-                            <input type="number" name="entryQuantity" id="entryQuantity" class="form-control" value="{{ $productSale->entryQuantity }}"> <br>
+                            <input type="number" name="entryQuantity" id="entryQuantity" class="form-control" value="{{ $productSales->entryQuantity }}"> <br>
                             <label class="control-label">Total Amount</label><br>
-                            <input type="number" name="totalAmount" id="totalAmount" class="form-control" value="{{ $productSale->totalAmount }}"> <br>
+                            <input type="number" name="totalAmount" id="totalAmount" class="form-control" value="{{ $productSales->totalAmount }}"> <br>
                             <label class="control-label">Entry Date</label><br>
-                            <input type="date" name="entryDate" id="entryDate" class="form-control" value="{{ $productSale->entryDate }}"> <br>
+                            <input type="date" name="entryDate" id="entryDate" class="form-control" value="{{ $productSales->entryDate }}"> <br>
                             <input type="submit" value="update" class="btn btn-success">
 
                         </form>
