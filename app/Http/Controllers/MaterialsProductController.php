@@ -29,7 +29,6 @@ class MaterialsProductController extends Controller
     }
 
 
-
     public function show($id)
     {
         $materialsProduct = materialsProduct::find($id);
