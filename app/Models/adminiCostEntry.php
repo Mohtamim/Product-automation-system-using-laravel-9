@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class adminiCostEntry extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $fillable = [
         'expenseHeadName',
         'expenseAmount',
-        'Note',
+        'note',
     ];
 
 }

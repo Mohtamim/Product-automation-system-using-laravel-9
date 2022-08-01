@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Admin Cost Type List</h2>
+                        <h2 class=" text-success h2 text-center font-weight-bold">Admin Cost Type List</h2>
                     </div>
 
                     <div class="card-body">
