@@ -4,11 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminCostTypeController;
 use App\Http\Controllers\AdminiCostEntryController;
 use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\MaterialsController;
 use App\Http\Controllers\MaterialsProductController;
 use App\Http\Controllers\ProductionManageController;
 use App\Http\Controllers\ProductMakingController;
 use App\Http\Controllers\ProductSaleController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\SuppliersController;
 use App\Http\Controllers\UniteTypeController;
 
 
@@ -34,6 +36,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('admin-cost',AdminCostTypeController::class);
     Route::resource('cost-entry',AdminiCostEntryController::class);
     Route::resource('material-to-products',MaterialsProductController::class);
+    Route::resource('materials',MaterialsController::class);
+    Route::resource('suppliers',SuppliersController::class);
     Route::resource('production-manage',ProductionManageController::class);
     Route::resource('products-making',ProductMakingController::class);
     Route::resource('products-sale',ProductSaleController::class);
