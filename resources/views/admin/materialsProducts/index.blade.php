@@ -1,5 +1,5 @@
-@extends('products.layout')
-@section('content')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row bg-red" style="margin:20px;">
             <div class="col-12">
@@ -9,7 +9,7 @@
                     </div>
 
                     <div class="card-body">
-                        <a href="{{url('students/create')}}" class="btn btn-success btn-sm" title="Add new Student">
+                        <a href="{{url('admin/material-to-products/create')}}" class="btn btn-success btn-sm" title="Add new Student">
                             Add New
                         </a><br><br>
                         @if (session('flash_message'))

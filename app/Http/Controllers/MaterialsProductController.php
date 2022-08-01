@@ -11,14 +11,14 @@ class MaterialsProductController extends Controller
     
     public function index()
     {
-        $materialsProducts =materialsProduct::all();
-        return view('materialsProducts.index')->with('materialsProducts', $materialsProducts);
+        $materialsProducts = materialsProduct::all();
+        return view('admin.materialsProducts.index')->with('materialsProducts', $materialsProducts);
     }
 
     
     public function create()
     {
-        return view('materialsProducts.create');
+        return view('admin/materialsProducts.create');
     }
 
     public function store(Request $request)
