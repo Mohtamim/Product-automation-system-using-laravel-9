@@ -29,25 +29,26 @@
                                         <th>Unite Type</th>
                                         <th>Unite Price</th>
                                         <th>Total Price</th>
+                                        <th>Entry Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                    @foreach ($products as $item )
+                                    @foreach ($materialsProducts as $item )
 
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$item->selectSupplier}}</td>
-                                        <td>{{$item->selectMarerials}}</td>
+                                        <td>{{$item->selectMaterials}}</td>
                                         <td>{{$item->uniteType}}</td>
                                         <td>{{$item->unitePrice}}</td>
                                         <td>{{$item->quantity}}</td>
                                         <td>{{$item->totalPrice}}</td>
                                         <td>{{$item->entryDate}}</td>
                                         <td>
-                                            <a href="{{url('//'.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                                            <a href="{{url('//'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Student" aria-hidden="true"><i class="fa fa-pencil"></i></a>
-                                            <form method="POST" action="{{ url('/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <a href="{{url('admin/material-to-products/'.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a>
+                                            <a href="{{url('admin/material-to-products/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Student" aria-hidden="true"><i class="fa fa-pencil"></i></a>
+                                            <form method="POST" action="{{ url('admin/material-to-products/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash" aria-hidden="true"></i></button>

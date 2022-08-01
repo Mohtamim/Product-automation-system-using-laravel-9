@@ -7,7 +7,7 @@
                     <div class="card-header">
                         <h2>Product List</h2>
                     </div>
-   
+    
                     <div class="card-body">
                          <a href="{{url('admin/products/create')}}" class="btn btn-success btn-sm" title="Add new Student">
                             Add New
