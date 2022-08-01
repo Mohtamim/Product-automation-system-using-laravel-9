@@ -27,7 +27,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-    Route::get('dashboard',function(){
+    Route::get('/',function(){
         return view('admin.include.index');
     });
     Route::resource('customers',CustomersController::class);
