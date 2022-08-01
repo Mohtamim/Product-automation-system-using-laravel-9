@@ -38,7 +38,7 @@
                 <li class="{{ Route::is('admin.admin-cost*') ? 'active' : '' }}"><a href="{{url('admin/admin-cost')}}"><i class="fa fa-share-alt-square"></i> <span>Admin Cost</span></a></li>
                 <li class="header">Vendors</li>
                 <li>
-                    <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>ui Elements</span></a>
+                    <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>Reports</span></a>
                     <ul>
                         <li><a href="ui-helper-class.blade.php">Helper Classes</a></li>
                         <li><a href="ui-bootstrap.blade.php">Bootstrap UI</a></li>
@@ -57,76 +57,7 @@
                         <li><a href="ui-range-sliders.blade.php">Range Sliders</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#forms" class="has-arrow"><i class="fa fa-pencil"></i><span>Forms Elements</span></a>
-                    <ul>
-                        <li><a href="forms-basic.blade.php">Basic Elements</a></li>
-                        <li><a href="forms-advanced.blade.php">Advanced Elements</a></li>
-                        <li><a href="forms-validation.blade.php">Form Validation</a></li>
-                        <li><a href="forms-wizard.blade.php">Form Wizard</a></li>
-                        <li><a href="forms-dragdropupload.blade.php">Drag &amp; Drop Upload</a></li>
-                        <li><a href="forms-cropping.blade.php">Image Cropping</a></li>
-                        <li><a href="forms-summernote.blade.php">Summernote</a></li>
-                        <li><a href="forms-editors.blade.php">CKEditor</a></li>
-                        <li><a href="forms-markdown.blade.php">Markdown</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#Tables" class="has-arrow"><i class="fa fa-table"></i><span>Tables</span></a>
-                    <ul>
-                        <li><a href="table-normal.blade.php">Normal Tables</a></li>
-                        <li><a href="table-jquery-datatable.blade.php">Jquery Datatables</a></li>
-                        <li><a href="table-editable.blade.php">Editable Tables</a></li>
-                        <li><a href="table-color.blade.php">Tables Color</a></li>
-                        <li><a href="table-filter.blade.php">Table Filter</a></li>
-                        <li><a href="table-dragger.blade.php">Table dragger</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#charts" class="has-arrow"><i class="fa fa-pie-chart"></i><span>Charts</span></a>
-                    <ul>
-                        <li><a href="chart-apex.blade.php">Apex Charts</a></li>
-                        <li><a href="chart-c3.blade.php">C3 Charts</a></li>
-                        <li><a href="chart-morris.blade.php">Morris Chart</a></li>
-                        <li><a href="chart-flot.blade.php">Flot Chart</a></li>
-                        <li><a href="chart-chartjs.blade.php">ChartJS</a></li>
-                        <li><a href="chart-jquery-knob.blade.php">Jquery Knob</a></li>
-                        <li><a href="chart-sparkline.blade.php">Sparkline Chart</a></li>
-                    </ul>
-                </li>
-                <li class="header">More Pages</li>
-                <li><a href="widgets.blade.php"><i class="fa fa-puzzle-piece"></i><span>Widgets</span></a></li>
-                <li>
-                    <a href="#Pages" class="has-arrow"><i class="fa fa-folder"></i><span>Pages</span></a>
-                    <ul>
-                        <li><a href="page-login.blade.php">Login</a></li>
-                        <li><a href="page-register.blade.php">Register</a></li>
-                        <li><a href="page-forgot-password.blade.php">Forgot Password</a></li>
-                        <li><a href="page-404.blade.php">Page 404</a></li>
-                        <li><a href="page-blank.blade.php">Blank Page</a></li>
-                        <li><a href="page-search-results.blade.php">Search Results</a></li>
-                        <li><a href="page-profile.blade.php">Profile </a></li>
-                        <li><a href="page-invoices.blade.php">Invoices </a></li>
-                        <li><a href="page-gallery.blade.php">Image Gallery </a></li>
-                        <li><a href="page-timeline.blade.php">Timeline</a></li>
-                        <li><a href="page-pricing.blade.php">Pricing</a></li>
-                    </ul>
-                </li>
-                <li><a href="map-jvectormap.blade.php"><i class="fa fa-map"></i> <span>jVector Maps</span></a></li>
-                <li class="extra_widget">
-                    <div class="form-group">
-                        <label class="d-block">Traffic this Month <span class="float-right">77%</span></label>
-                        <div class="progress progress-xxs">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="d-block">Server Load <span class="float-right">50%</span></label>
-                        <div class="progress progress-xxs">
-                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </nav>
     </div>
