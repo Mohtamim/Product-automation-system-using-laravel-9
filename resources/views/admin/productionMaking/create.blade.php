@@ -1,5 +1,5 @@
-@extends('products.layout')
-@section('content')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,7 +9,7 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('')}}" method="post" class="form">
+                        <form action="{{url('admin/products-making')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Products</label><br>
                             <input type="text" name="selectProduct" id="selectProduct" class="form-control"><br>

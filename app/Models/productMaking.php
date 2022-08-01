@@ -9,7 +9,7 @@ class productMaking extends Model
 {
     
     use HasFactory;
-    protected $table ='productMaking';
+    protected $table ='product_makings';
     protected $primarykey ='id';
     protected $fillable =[
                 'selectProduct',

@@ -1,5 +1,5 @@
-@extends('products.layout')
-@section('content')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,9 +9,9 @@
                     </div>
 
                       <div class="card-body">
-                        <h5 class="card-title">Products: {{ $products->productName }}</h5>
-                        <p class="card-text">:Materials: {{ $products->selectMaterials }}</p>
-                        <p class="card-text">Price: {{ $products->materialsQuantity }}</p>
+                        <h5 class="card-title">Products: {{ $productShow->selectProduct}}</h5>
+                        <p class="card-text">:Materials: {{ $productShow->selectMaterials }}</p>
+                        <p class="card-text">Price: {{ $productShow->materialsQuantity }}</p>
                       </div>
                 </div>
             </div>
