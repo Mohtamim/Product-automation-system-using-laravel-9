@@ -12,32 +12,32 @@ class ProductsController extends Controller
     public function index()
     {
         $products =products::all();
-        return view('products.index')->with('products', $products);
+        return view('admin.products.index')->with('products', $products);
     }
 
     public function create()
     {
-        return view('products.create');
+        return view('admin.products.create');
     }
 
     public function store(Request $request)
     {
         $input= $request->all();
         products::create($input);
-        return redirect('products')->with('flash_message','product Added');
+        return redirect('admin/products')->with('flash_message','product Added');
     }
 
-    public function show(products $id)
+    public function show($id)
     {
         $products = products::find($id);
-        return view('products.productShow')->with('products',$products);
+        return view('admin.products.product_Show')->with('products',$products);
     }
 
     
     public function edit($id)
     {
         $products = products::find($id);
-        return view('products.edit')->with('products', $products);
+        return view('admin.products.edit')->with('products', $products);
     }
 
     public function update(Request $request, $id)
@@ -45,12 +45,12 @@ class ProductsController extends Controller
         $products = products::find($id);
         $input =$request->all();
         $products->update($input);
-        return redirect('products')->with('flash_massage','products updated!!');
+        return redirect('admin/products/')->with('flash_massage','products updated!!');
     }
 
-    public function destroy(products $id)
+    public function destroy($id)
     {
         products::destroy($id);
-        return redirect('products')->with('flash_massage','Product Deleted');
+        return redirect('admin/products/')->with('flash_massage','Product Deleted');
     }
 }

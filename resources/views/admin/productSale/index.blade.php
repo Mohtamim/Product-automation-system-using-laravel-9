@@ -1,5 +1,5 @@
-@extends('students.layout')
-@section('content')
+@extends('admin.include.layout')
+@section('mainPart')
     <div class="container">
         <div class="row bg-red" style="margin:20px;">
             <div class="col-12">
@@ -8,7 +8,7 @@
                         <h2>Product Sale List</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{url('/productSale/create')}}" class="btn btn-success btn-sm" title="Add new Product Sale">
+                        <a href="{{url('admin/productSale/create')}}" class="btn btn-success btn-sm" title="Add new Product Sale">
                             Add New
                         </a><br><br>
                         <div class="table-responsive">
@@ -37,9 +37,9 @@
                                         <td>{{$item->totalAmount}}</td>
                                         <td>{{$item->entryDate}}</td>
                                         <td>
-                                            <a href="{{url('/productSale/'.$item->id)}}" class="btn btn-info btn-sm" title="View Product" aria-hidden="true"><i class="fa fa-eye"></i></a>
-                                            <a href="{{url('/productSale/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit product" aria-hidden="true"><i class="fa fa-pencil"></i></a>
-                                            <form method="POST" action="{{ url('/productSale/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <a href="{{url('admin/productSale/'.$item->id)}}" class="btn btn-info btn-sm" title="View Product" aria-hidden="true"><i class="fa fa-eye"></i></a>
+                                            <a href="{{url('admin/productSale/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit product" aria-hidden="true"><i class="fa fa-pencil"></i></a>
+                                            <form method="POST" action="{{ url('admin/productSale/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Products" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash" aria-hidden="true"></i></button>
