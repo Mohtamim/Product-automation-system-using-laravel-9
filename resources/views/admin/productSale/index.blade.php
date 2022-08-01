@@ -5,10 +5,10 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Product Sale List</h2>
+                        <h2 class=" text-success text-center font-weight-bold">Product Sale List</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{url('admin/productSale/create')}}" class="btn btn-success btn-sm" title="Add new Product Sale">
+                        <a href="{{url('admin/products-sale/create')}}" class="btn btn-success btn-sm" title="Add new Product Sale">
                             Add New
                         </a><br><br>
                         <div class="table-responsive">
@@ -25,7 +25,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($productSale as $item )
+                                    @foreach ($productSales as $item )
 
 
                                     <tr>

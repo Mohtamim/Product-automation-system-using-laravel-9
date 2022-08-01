@@ -25,13 +25,13 @@ class ProductSaleController extends Controller
     {
         $input= $request->all();
         productSale::create($input);
-        return redirect('admin/productSales')->with('flash_message','Product Added');
+        return redirect('admin/products-sale')->with('flash_message','Product Added');
     }
 
     public function show($id)
     {
         $product = productSale::find($id);
-        return view('admin/productSale.show')->with('productSales',$product);
+        return view('admin/products-sale/show')->with('productSales',$product);
     }
 
     public function edit($id)
