@@ -12,7 +12,7 @@
                             Add New
                         </a><br><br>
                         <div class="table-responsive">
-                            <table class="table text-center">
+                            <table class="table text-center table-striped table-hover dataTable js-exportable">
                                 <thead>
                                     <tr>
                                         <th>SI</th>
@@ -55,4 +55,10 @@
 
         </div>
     </div>
+    @include('admin.include.dataTable')
+    <script >
+        $(document).ready( function () {
+            $('.table').DataTable();
+        } );
+    </script>
 @endsection

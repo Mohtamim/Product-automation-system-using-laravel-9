@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
 <!-- Javascript -->
 <script src="{{ asset('assets/bundles/libscripts.bundle.js') }}"></script>
 <script src="{{ asset('assets/bundles/vendorscripts.bundle.js') }}"></script>
@@ -11,4 +15,6 @@
 
 <!-- Project core js file minify with grunt -->
 <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script>
-<script src="{{ asset('../js/index.js') }}"></script>
+<script src="{{ asset('../js/pages/tables/jquery-datatable.js') }}"></script>
+
+

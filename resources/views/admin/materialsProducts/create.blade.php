@@ -19,7 +19,7 @@
                                 @endforeach
                               </select><br>
                             <label class="control-label">Materials</label><br>
-                            <select class="form-select" name="materialsName" id="materialsName" aria-label="Default select example">
+                            <select class="form-select" name="selectMaterials" id="selectMaterials" aria-label="Default select example">
                                 <option  selected class="form-control">Select Materials</option>
                                 @foreach ($material as $material)
                                 <option value="{{ $material->materialsName }}">{{ $material->materialsName }}</option>
