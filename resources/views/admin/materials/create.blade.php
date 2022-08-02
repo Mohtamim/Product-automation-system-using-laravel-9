@@ -17,10 +17,15 @@
                             <label class="control-label">Materials Code</label><br>
                             <input type="text" name="materialsCode" id="materialsCode" class="form-control"><br>
 
-                            <label class="control-label">Materials Unite</label><br>
-                            <input type="text" name="materialsUnite" id="materialsUnite" class="form-control"><br>
+                            <label class="control-label">Materials Unit</label><br>
+                            <select class="form-select" name="materialsUnite" id="materialsUnite" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select><br>
 
-                            <label class="control-label">Materials Unite Price</label><br>
+                            <label class="control-label">Materials Unit Price</label><br>
                             <input type="text" name="materialsUnitePrice" id="materialsUnitePrice" class="form-control"><br>
 
                             <label class="control-label">Update Stock</label><br>
