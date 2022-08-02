@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\productSale;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\productSaleRequest;
 use Illuminate\Http\Request;
 
 class ProductSaleController extends Controller
@@ -21,7 +22,7 @@ class ProductSaleController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(productSaleRequest $request)
     {
         $input= $request->all();
         productSale::create($input);
@@ -41,7 +42,7 @@ class ProductSaleController extends Controller
 
     }
 
-    public function update(Request $request, $id)
+    public function update(productSaleRequest $request, $id)
     {
         $productSales = productSale::find($id);
         $input = $request->all();

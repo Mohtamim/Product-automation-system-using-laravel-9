@@ -13,7 +13,7 @@ class productionManageRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class productionManageRequest extends FormRequest
     public function rules()
     {
         return [
-            'entryDate'=>'required|date|regex:/^[\pL\s\-]+$/u',
+            'entryDate'=>'required',
             'productionNo'=>'required|numeric',
             'expiryDate'=>'required|date',
             'selectProductName'=>'required|string',
@@ -38,7 +38,7 @@ class productionManageRequest extends FormRequest
     {
         return [
             'entryDate.required' => 'Please Fill The Date Field',
-            'productionNo.required' => 'Please Enter Production Numbre',
+            'productionNo.required' => 'Please Enter Production Number',
             'expiryDate.required' => 'Please Fill The Date Field',
             'selectProductName.required' => 'Enter Product name',
             'uniteType.required' => 'Enter Unite Type',
