@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\materialsProduct;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\materialsProValidation;
 use App\Models\materials;
 use App\Models\suppliers;
 use Illuminate\Http\Request;
@@ -26,7 +25,7 @@ class MaterialsProductController extends Controller
         return view('admin.materialsProducts.create')->with(['supplier'=> $supplier,'material'=> $material]);
     }
 
-    public function store(materialsProValidation $request)
+    public function store(Request $request)
     {
         $input= $request->all();
         materialsProduct::create($input);
@@ -48,7 +47,7 @@ class MaterialsProductController extends Controller
     }
 
 
-    public function update(materialsProValidation $request, $id)
+    public function update(Request $request, $id)
     {
         $materialsProduct = materialsProduct::find($id);
         $input =$request->all();
