@@ -20,7 +20,7 @@
                         <div class="bg-info text-white text-center">{{ session('updated')}}</div>
                          @endif
                         <div class="table-responsive">
-                            <table class="table text-center">
+                            <table class="table text-center table-striped table-hover dataTable js-exportable">
                                 <thead>
                                     <tr>
                                         <th>Sl</th>
@@ -61,13 +61,11 @@
 
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
+    @include('admin.include.dataTable')
+    <script >
+        $(document).ready( function () {
             $('.table').DataTable();
-        });
+        } );
     </script>
 
 @endsection
