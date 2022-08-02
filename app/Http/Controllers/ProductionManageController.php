@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\productionManage;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\productionManageRequest;
 use Illuminate\Http\Request;
 
 class ProductionManageController extends Controller
@@ -21,7 +22,7 @@ class ProductionManageController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(productionManageRequest $request)
     {
         $input= $request->all();
         productionManage::create($input);
@@ -41,7 +42,7 @@ class ProductionManageController extends Controller
 
     }
 
-    public function update(Request $request, $id)
+    public function update(productionManageRequest $request, $id)
     {
         $production =productionManage::find($id);
         $input = $request->all();

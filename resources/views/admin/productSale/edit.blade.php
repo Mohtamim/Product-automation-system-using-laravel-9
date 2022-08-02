@@ -1,5 +1,5 @@
 @extends('admin.include.layout')
-@section('mainpart')
+@section('mainPart')
     <div class="container">
         <div class="row" style="margin:20px;">
             <div class="col-12">
@@ -9,7 +9,7 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{ url('admin/products-sale'.$productSales->id) }}" method="post">
+                        <form action="{{ url('admin/products-sale/'.$productSales->id) }}" method="post">
                             {!! csrf_field() !!}
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$productSales->id}}" />
@@ -26,7 +26,7 @@
                             <label class="control-label">Entry Date</label><br>
                             <input type="date" name="entryDate" id="entryDate" class="form-control" value="{{ $productSales->entryDate }}"> <br>
                             <input type="submit" value="update" class="btn btn-success">
-                            <a href="{{ url('admin/products-sale) }}" class="btn btn-danger btn-small" >Cancel</a>
+                            <a href="{{ url('admin/products-sale') }}" class="btn btn-danger btn-small" >Cancel</a>
 
 
                         </form>

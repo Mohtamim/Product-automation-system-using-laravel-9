@@ -14,17 +14,52 @@
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$customers->id}}" />
                             <label class="control-label">Customer Name</label><br>
-                            <input type="text" name="customerName" id="customerName" class="form-control" value="{{ $customers->customerName }}"><br>
+                            <input type="text" name="customerName" id="customerName" class="form-control
+                            @error('customerName')
+                            is-invalid
+                             @enderror" value="{{ $customers->customerName }}"><br>
+                             @error('customerName')
+                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
+                                  @enderror <br>
                             <label class="control-label">Contact No</label><br>
-                            <input type="number" name="contactNo" id="contactNo" class="form-control" value="{{ $customers->contactNo }}"><br>
+                            <input type="number" name="contactNo" id="contactNo" class="form-control
+                            @error('contactNo')
+                            is-invalid
+                             @enderror" value="{{ $customers->contactNo }}"><br>
+                             @error('contactNo')
+                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
+                                  @enderror <br>
                             <label class="control-label">Email ID</label><br>
-                            <input type="email" name="emailId" id="emailId" class="form-control" value="{{ $customers->emailId }}"><br>
+                            <input type="email" name="emailId" id="emailId" class="form-control
+                            @error('emailId')
+                            is-invalid
+                             @enderror"value="{{ $customers->emailId }}"><br>
+                             @error('emailId')
+                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
+                                  @enderror <br>
                             <label class="control-label">City Locatiom</label><br>
-                            <input type="text" name="cityLocation" id="cityLocation" class="form-control" value="{{ $customers->cityLocation }}"> <br>
+                            <input type="text" name="cityLocation" id="cityLocation" class="form-control
+                            @error('cityLocation')
+                            is-invalid
+                             @enderror" value="{{ $customers->cityLocation }}"> <br>
+                             @error('cityLocation')
+                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
+                                  @enderror <br>
                             <label class="control-label">Address</label><br>
-                            <input type="text" name="address" id="address" class="form-control" value="{{ $customers->address }}"> <br>
+                            <input type="text" name="address" id="address" class="form-control
+                            @error('address')
+                            is-invalid
+                             @enderror" value="{{ $customers->address }}"> <br>
+                             @error('address')
+                            is-invalid
+                             @enderror
                             <label class="control-label">Update Balance</label><br>
-                            <input type="number" name="updatedBalance" id="updatedBalance" class="form-control" value="{{ $customers->updatedBalance }}"> <br>
+                            <input type="number" name="updatedBalance" id="updatedBalance" class="form-control @error('updatedBalance')
+                            is-invalid
+                             @enderror" value="{{ $customers->updatedBalance }}"> <br>
+                             @error('updatedBalance')
+                            is-invalid
+                             @enderror
                             <input type="submit" value="update" class="btn btn-success">
                             <a href="{{ url('admin/customers') }}" class="btn btn-danger btn-small" >Cancel</a>
 
