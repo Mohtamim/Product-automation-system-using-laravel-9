@@ -10,8 +10,8 @@ class adminiCostEntry extends Model
     use HasFactory;
     public $timestamps = false;
     protected $fillable = [
-        'expenseHeadName',
-        'expenseAmount',
+        'expenseHeadName'=>'required|string|regex:/^[\pL\s\-]+$/u',
+        'expenseAmount'=>'required|',
         'note',
     ];
 

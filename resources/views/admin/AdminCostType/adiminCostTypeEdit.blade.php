@@ -14,9 +14,18 @@
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$adminCostType->id}}" />
                             <label class="control-label">ExpenseHeadName</label><br>
-                            <input type="text" name="expenseHeadName" id="expenseHeadName" class="form-control" value="{{ $adminCostType->expenseHeadName }}"><br>
+                            <input type="text" name="expenseHeadName" id="expenseHeadName" class="form-control @error('expenseHeadName')
+                             is-invalid @enderror" value="{{ $adminCostType->expenseHeadName }}">
+                             @error('expenseHeadName')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message}}</strong>
+                                    </span>
+                             @enderror
                             <label class="control-label">ExpenseCode</label><br>
-                            <input type="text" name="expenseCode" id="expenseCode" class="form-control" value="{{ $adminCostType->expenseCode }}"><br>
+                            <input type="text" name="expenseCode" id="expenseCode" class="form-control @error('expenseCode') is-invalid @enderror" value="{{ $adminCostType->expenseCode }}">
+                            @error('expenseCode')
+                                <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
                             <input type="submit" value="update" class="btn btn-success btn-sm">
                             <a href="{{ url('admin/admin-cost') }}" class="btn btn-info btn-sm me-5" >Back to List</a>
                         </form>

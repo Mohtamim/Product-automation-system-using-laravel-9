@@ -15,12 +15,20 @@
                             <input type="text" name="materialsName" id="materialsName" class="form-control"><br>
 
                             <label class="control-label">Materials Code</label><br>
-                            <input type="text" name="materialsCode" id="materialsCode" class="form-control"><br>
-
+                            <input type="text" name="materialsCode" id="materialsCode" class="form-control"  @error('materialsCode')is-invalid @enderror"><br>
+                            @error('materialsCode')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span><br>
+                        @enderror
                             <label class="control-label">Materials Unit</label><br>
                             <select class="form-select" name="materialsUnite" id="materialsUnite" aria-label="Default select example">
 
-                                <option selected>Open this select menu</option>
+<<<<<<< HEAD
+                                <option  selected class="form-control">Open this select menu</option>
+=======
+                                <option selected class="form-control">Select</option>
+>>>>>>> 5478a25d16a37818452ee0d8fef7e7517fa04a64
                                 @foreach ($unit as $unit)
                                 <option value="{{ $unit->uniteName }}">{{ $unit->uniteName }}</option>
                                 @endforeach

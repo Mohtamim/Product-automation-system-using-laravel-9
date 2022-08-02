@@ -19,4 +19,11 @@ class materialsProduct extends Model
                 'totalPrice',
 
     ];
+    public function suppliers()
+{
+    return $this->hasMany(suppliers::class );
+}
+public function materials(){
+    return $this->hasMany(materials::class );
+}
 }
