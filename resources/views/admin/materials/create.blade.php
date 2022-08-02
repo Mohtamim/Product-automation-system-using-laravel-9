@@ -24,7 +24,11 @@
                             <label class="control-label">Materials Unit</label><br>
                             <select class="form-select" name="materialsUnite" id="materialsUnite" aria-label="Default select example">
 
+<<<<<<< HEAD
                                 <option  selected class="form-control">Open this select menu</option>
+=======
+                                <option selected class="form-control">Select</option>
+>>>>>>> 5478a25d16a37818452ee0d8fef7e7517fa04a64
                                 @foreach ($unit as $unit)
                                 <option value="{{ $unit->uniteName }}">{{ $unit->uniteName }}</option>
                                 @endforeach
