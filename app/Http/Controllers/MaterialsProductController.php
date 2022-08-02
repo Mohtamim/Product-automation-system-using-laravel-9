@@ -4,12 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\materialsProduct;
 use App\Http\Controllers\Controller;
-<<<<<<< HEAD
 use App\Http\Requests\materialsProValidation;
-=======
 use App\Models\materials;
 use App\Models\suppliers;
->>>>>>> bda7df69faea0724847de36b18f8a31d4339c604
 use Illuminate\Http\Request;
 
 class MaterialsProductController extends Controller
