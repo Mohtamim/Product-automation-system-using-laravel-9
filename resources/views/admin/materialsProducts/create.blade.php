@@ -12,11 +12,22 @@
                         <form action="{{url('admin/material-to-products')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Supplier</label><br>
-                            <input type="text" name="selectSupplier" id="selectSupplier" class="form-control"><br>
-                            <label class="control-label">Materials</label><br>
-                            <input type="text" name="selectMaterials" id="selectMaterials" class="form-control"><br>
+                            <select class="form-select" name="selectSupplier" id="selectSupplier" aria-label="Default select example">
+                                <option  selected class="form-control">Open this select menu</option>
+                                @foreach ($supplier as $supplier)
+                                <option value="{{ $supplier->supplierName }}">{{ $supplier->supplierName }}</option>
+                                @endforeach
+                              </select><br><br>
+
+                            <select class="form-select" name="materialsName" id="materialsName" aria-label="Default select example">
+                                <option  selected class="form-control">Select Materials</option>
+                                @foreach ($material as $material)
+                                <option value="{{ $material->materialsName }}">{{ $material->materialsName }}</option>
+                                @endforeach
+                              </select><br>
                             <label class="control-label">Unite Type</label><br>
-                            <input type="number" name="uniteType" id="uniteType" class="form-control"><br>
+                            <input type="number" name="uniteType" id="uniteType" value="{{ $material->uniteType }}" class="form-control">
+                            <br>
                             <label class="control-label">Unite Price</label><br>
                             <input type="number" name="unitePrice" id="unitePrice" class="form-control"><br>
                             <label class="control-label">Quantity</label><br>

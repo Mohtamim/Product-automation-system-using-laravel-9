@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\adminCostType;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\adminCostRequest;
 
 class AdminCostTypeController extends Controller
 {
@@ -21,7 +22,7 @@ class AdminCostTypeController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(adminCostRequest $request)
     {
         $input= $request->all();
         adminCostType::create($input);
@@ -48,7 +49,7 @@ class AdminCostTypeController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(adminCostRequest $request, $id)
     {
         $adminCostType = adminCostType::find($id);
         $input = $request->all();
