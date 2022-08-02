@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\products;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\productsValidation;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -20,7 +21,7 @@ class ProductsController extends Controller
         return view('admin.products.create');
     }
 
-    public function store(Request $request)
+    public function store(productsValidation $request)
     {
         $input= $request->all();
         products::create($input);
@@ -40,7 +41,7 @@ class ProductsController extends Controller
         return view('admin.products.edit')->with('products', $products);
     }
 
-    public function update(Request $request, $id)
+    public function update(productsValidation $request, $id)
     {
         $products = products::find($id);
         $input =$request->all();

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\productMaking;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\proMakingValidation;
 use Illuminate\Http\Request;
 
 class ProductMakingController extends Controller
@@ -22,7 +23,7 @@ class ProductMakingController extends Controller
     }
 
     
-    public function store(Request $request)
+    public function store(proMakingValidation $request)
     {
         $input= $request->all();  
         productMaking::create($input);
@@ -43,7 +44,7 @@ class ProductMakingController extends Controller
     }
 
     
-    public function update(Request $request, $id)
+    public function update(proMakingValidation $request, $id)
     {
         $productMaking = productMaking::find($id);
         $input =$request->all();

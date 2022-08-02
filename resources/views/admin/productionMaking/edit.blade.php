@@ -14,11 +14,35 @@
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$productEdit->id}}" />
                             <label class="control-label">Products</label><br>
-                            <input type="text" name="selectProduct" id="selectProduct" class="form-control" value="{{$productEdit->selectProduct}}"><br>
+                            <input type="text" name="selectProduct" id="selectProduct" class="form-control
+                            @error('selectProduct')
+                                is-invalid
+                            @enderror" value="{{$productEdit->selectProduct}}"><br>
+                            @error('selectProduct')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message}}</strong>
+                                </span><br>
+                            @enderror
                             <label class="control-label">Materials</label><br>
-                            <input type="text" name="selectMaterials" id="selectMaterials" class="form-control" value="{{$productEdit->selectMaterials}}"><br>
+                            <input type="text" name="selectMaterials" id="selectMaterials" class="form-control
+                            @error('selectMaterials')
+                                is-invalid
+                            @enderror" value="{{$productEdit->selectMaterials}}"><br>
+                            @error('selectMaterials')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message}}</strong>
+                            </span><br>
+                            @enderror
                             <label class="control-label">Materials Quantity</label><br>
-                            <input type="text" name="materialsQuantity" id="materialsQuantity" class="form-control" value="{{$productEdit->materialsQuantity}}"><br>
+                            <input type="text" name="materialsQuantity" id="materialsQuantity" class="form-control
+                            @error('materialsQuantity')
+                                is-invalid
+                            @enderror" value="{{$productEdit->materialsQuantity}}"><br>
+                            @error('materialsQuantity')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message}}</strong>
+                            </span><br>
+                            @enderror
                             <input type="submit" value="save" class="btn btn-success">
                             <a href="{{ url('admin/products-making/') }}" class="btn btn-danger btn-small" >Cancel</a>
                         </form>
