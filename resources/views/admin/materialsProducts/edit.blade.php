@@ -26,7 +26,7 @@
                             <label class="control-label">Total Price</label><br>
                             <input type="number" name="totalPrice" id="totalPrice" class="form-control" value="{{$materialsProduct->totalPrice}}"><br>
                             <input type="submit" value="save" class="btn btn-success">
-
+                            <a href="{{ url('admin/material-to-products/') }}" class="btn btn-danger btn-small" >Cancel</a>
                         </form>
                       </div>
                 </div>

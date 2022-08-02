@@ -26,7 +26,7 @@
                 <li class="header">Main</li>
                 <li class="{{ Route::is('admin.adminHome') ? 'active' : '' }}"><a href="{{ url('admin/') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li class="header">Service</li>
-                <li class="{{ Route::is('admin.products.index') ? 'active' : ''  }}{{  Route::is('admin.products.edit') ? 'active' : ''  }}{{ Route::is('admin.products.show') ? 'active' : '' }}{{ Route::is('admin.products.create') ? 'active' : '' }}"><a href="{{ url('admin/products') }}"><i class="fa-brands fa-product-hunt"></i> <span>Prodtucs</span> <span class="badge badge-default mr-0"></span></a></li>
+                <li class="{{ Route::is('admin.products.index') ? 'active' : ''  }}{{  Route::is('admin.products.edit') ? 'active' : ''  }}{{ Route::is('admin.products.show') ? 'active' : '' }}{{ Route::is('admin.products.create') ? 'active' : '' }}"><a href="{{ url('admin/products') }}"><i class="fa-brands fa-product-hunt"></i> <span>Products</span> <span class="badge badge-default mr-0"></span></a></li>
                 <li class="{{ Route::is('admin.suppliers*') ? 'active' : '' }}"><a href="{{ url('admin/suppliers') }}"><i class="fas fa-industry"></i> <span>Suppliers</span></a></li>
                 <li class="{{ Route::is('admin.customers*') ? 'active' : '' }}"><a href="{{url('admin/customers')}}"><i class="fa fa-users" aria-hidden="true"></i> <span>Customers</span></a></li>
                 <li class="{{ Route::is('admin.unit-type*') ? 'active' : '' }}"><a href="{{url('admin/unit-type')}}"><i class="fa fa-th-list"></i> <span>Unit Type</span></a></li>

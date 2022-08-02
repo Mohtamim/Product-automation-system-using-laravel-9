@@ -20,7 +20,7 @@
                             <label class="control-label">Materials Quantity</label><br>
                             <input type="text" name="materialsQuantity" id="materialsQuantity" class="form-control" value="{{$productEdit->materialsQuantity}}"><br>
                             <input type="submit" value="save" class="btn btn-success">
-
+                            <a href="{{ url('admin/products-making/') }}" class="btn btn-danger btn-small" >Cancel</a>
                         </form>
                       </div>
                 </div>
