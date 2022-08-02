@@ -36,6 +36,7 @@
                 <li class="{{ Route::is('admin.production-manage*') ? 'active' : '' }}"><a href="{{ url('admin/production-manage') }}"><i class="fa fa-globe"></i> <span>Production Manage</span></a></li>
                 <li class="{{ Route::is('admin.products-making*') ? 'active' : '' }}"><a href="{{ url('admin/products-making') }}"><i class="fa fa-globe"></i> <span>Products Making</span></a></li>
                 <li class="{{ Route::is('admin.admin-cost*') ? 'active' : '' }}"><a href="{{url('admin/admin-cost')}}"><i class="fa fa-share-alt-square"></i> <span>Admin Cost</span></a></li>
+                <li class="{{ Route::is('admin.cost-entry*') ? 'active' : '' }}"><a href="{{url('admin/cost-entry')}}"><i class="fa fa-share-alt-square"></i> <span>Expence</span></a></li>
                 <li class="header">Vendors</li>
                 <li>
                     <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>Reports</span></a>
