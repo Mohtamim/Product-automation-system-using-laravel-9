@@ -65,8 +65,9 @@ class MaterialsController extends Controller
      */
     public function edit($id)
     {
+        $unit= uniteType::all();
         $materials = materials::find($id);
-        return view('admin.materials.edit')->with('materials',$materials);
+        return view('admin.materials.edit')->with(['materials'=> $materials, 'unit'=>$unit]);
     }
 
     /**
