@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
                         <a href="{{url('admin/production-manage/create')}}" class="btn btn-success btn-sm" title="Add new Production Manage">
-                            Add New
+                            <i class="fa-solid fa-plus"> Add </i>
                         </a><br><br>
                         <div class="table-responsive">
                             <table class="table text-center">

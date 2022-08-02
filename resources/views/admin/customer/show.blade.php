@@ -16,9 +16,12 @@
                         <p class="card-text">Address: {{ $customers->address }}</p>
                         <p class="card-text">Update Balance: {{ $customers->updatedBalance }}</p>
                       </div>
+                      <a href="{{ url('admin/customers') }}" class="btn btn-danger btn-small ml-3 mb-3" >Go Back</a>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 @endsection

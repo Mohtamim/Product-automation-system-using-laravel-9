@@ -26,6 +26,8 @@
                             <label class="control-label">Entry Date</label><br>
                             <input type="date" name="entryDate" id="entryDate" class="form-control" value="{{ $productSales->entryDate }}"> <br>
                             <input type="submit" value="update" class="btn btn-success">
+                            <a href="{{ url('admin/products-sale) }}" class="btn btn-danger btn-small" >Cancel</a>
+
 
                         </form>
                       </div>

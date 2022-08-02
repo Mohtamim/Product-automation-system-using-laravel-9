@@ -26,6 +26,7 @@
                             <label class="control-label">Update Balance</label><br>
                             <input type="number" name="updatedBalance" id="updatedBalance" class="form-control" value="{{ $customers->updatedBalance }}"> <br>
                             <input type="submit" value="update" class="btn btn-success">
+                            <a href="{{ url('admin/customers') }}" class="btn btn-danger btn-small" >Cancel</a>
 
                         </form>
                       </div>

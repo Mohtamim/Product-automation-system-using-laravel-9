@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
                         <a href="{{url('admin/products-sale/create')}}" class="btn btn-success btn-sm" title="Add new Product Sale">
-                            Add New
+                            <i class="fa-solid fa-plus"> ADD </i>
                         </a><br><br>
                         <div class="table-responsive">
                             <table class="table text-center">
