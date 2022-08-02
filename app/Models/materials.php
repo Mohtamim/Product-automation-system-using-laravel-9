@@ -9,7 +9,7 @@ class materials extends Model
 {
     use HasFactory;
     protected $table = 'materials';
-    protected $primaryKey ='id';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'materialsName',
         'materialsCode',
@@ -17,4 +17,8 @@ class materials extends Model
         'materialsUnitePrice',
         'updateStock',
     ];
+    public function unitTye()
+    {
+        return $this->belongsTo(uniteType::class, 'uniteName');
+    }
 }

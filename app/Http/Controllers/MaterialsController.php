@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\materials;
 use App\Http\Controllers\Controller;
+use App\Models\uniteType;
 use Illuminate\Http\Request;
 
 class MaterialsController extends Controller
@@ -26,7 +27,8 @@ class MaterialsController extends Controller
      */
     public function create()
     {
-        return view('admin.materials.create');
+        $unit= uniteType::all();
+        return view('admin.materials.create')->with('unit',$unit);
     }
 
     /**

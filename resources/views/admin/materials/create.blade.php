@@ -19,10 +19,13 @@
 
                             <label class="control-label">Materials Unit</label><br>
                             <select class="form-select" name="materialsUnite" id="materialsUnite" aria-label="Default select example">
+
                                 <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                @foreach ($unit as $unit)
+                                <option value="{{ $unit->uniteName }}">{{ $unit->uniteName }}</option>
+                                @endforeach
+
+
                               </select><br>
 
                             <label class="control-label">Materials Unit Price</label><br>
