@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\adminiCostEntry;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\adminEntryRequest;
 use Illuminate\Http\Request;
 
 class AdminiCostEntryController extends Controller
@@ -21,7 +22,7 @@ class AdminiCostEntryController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(adminEntryRequest $request)
     {
         $input= $request->all();
         adminiCostEntry::create($input);
@@ -42,7 +43,7 @@ class AdminiCostEntryController extends Controller
     }
 
 
-    public function update(Request $request,$id)
+    public function update(adminEntryRequest $request,$id)
     {
         $adminCostEntry = adminiCostEntry::find($id);
         $input = $request->all();

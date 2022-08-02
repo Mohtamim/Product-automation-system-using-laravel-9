@@ -25,8 +25,8 @@ class adminEntryRequest extends FormRequest
     {
         return [
             'expenseHeadName'=>'required|string|regex:/^[\pL\s\-]+$/u',
-            'expenseAmount'=>'',
-            'note',
+            'expenseAmount'=>'required|numeric',
+            'note'=>'required|string|regex:/^[\pL\s\-]+$/u',
         ];
     }
 }

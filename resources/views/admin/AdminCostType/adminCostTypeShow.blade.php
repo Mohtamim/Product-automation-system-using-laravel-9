@@ -1,7 +1,7 @@
 @extends('admin.include.layout')
 @section('mainPart')
     <div class="container">
-        <div class="row" style="margin:20px;">
+        <div class="row bg-danger" style="margin:20px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -11,7 +11,7 @@
 
                       <div class="card-body">
                         <h5 class="card-title">expenseHeadName: {{ $adminCostType->expenseHeadName }}</h5>
-                        <p class="card-text">expenseCode: {{ $adminCostType->expenseCode }}</p>
+                        <h5 class="card-title">expenseCode: {{ $adminCostType->expenseCode }}</h5>
                       </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 @extends('admin.include.layout')
 @section('mainPart')
     <div class="container">
-        <div class="row" style="margin:20px;">
+        <div class="row bg-danger" style="margin:20px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
