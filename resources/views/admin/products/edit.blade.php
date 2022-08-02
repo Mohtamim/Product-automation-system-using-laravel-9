@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Edit Products</h2>
+                        <h2 class="text-success h2 text-center font-weight-bold">Edit Products</h2>
                     </div>
 
                       <div class="card-body">
@@ -22,7 +22,7 @@
                             <label class="control-label">Update Stock</label><br>
                             <input type="number" name="updatedStock" id="updatedStock" class="form-control" value="{{$products->updatedStock}}"><br>
                             <input type="submit" value="save" class="btn btn-success">
-
+                            <a href="{{ url('admin/products') }}" class="btn btn-danger btn-small" >Cancel</a>
                         </form>
                       </div>
                 </div>

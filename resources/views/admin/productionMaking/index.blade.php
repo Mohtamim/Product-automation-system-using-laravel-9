@@ -5,12 +5,12 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Product List</h2>
+                        <h2 class="text-success h2 text-center font-weight-bold">Product List</h2>
                     </div>
 
                     <div class="card-body">
                         <a href="{{url('admin/products-making/create')}}" class="btn btn-success btn-sm" title="Add new Student">
-                            Add New
+                            <i class="fa-solid  fa-plus"> Add</i>
                         </a><br><br>
                         @if (session('flash_message'))
                         <div class="bg-danger text-white text-center">{{ session('flash_message')}}</div>

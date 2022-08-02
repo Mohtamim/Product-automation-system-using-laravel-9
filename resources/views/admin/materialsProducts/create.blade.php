@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Add New Product</h2>
+                        <h2 class="text-success h2 text-center font-weight-bold">Add New Product</h2>
                     </div>
 
                       <div class="card-body">
@@ -24,7 +24,7 @@
                             <label class="control-label">Total Price</label><br>
                             <input type="number" name="totalPrice" id="totalPrice" class="form-control"><br>
                             <input type="submit" value="save" class="btn btn-success">
-
+                            <a href="{{ url('admin/material-to-products') }}" class="btn btn-danger btn-small" >Cancel</a>
                         </form>
                       </div>
                 </div>

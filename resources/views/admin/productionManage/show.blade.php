@@ -18,6 +18,7 @@
                         <p class="card-text">Production Quantity: {{ $productionManages->productionQuantity }}</p>
                         <p class="card-text">Selected Materials: {{ $productionManages->selectedMaterials }}</p>
                       </div>
+
                 </div>
             </div>
 

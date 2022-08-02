@@ -16,6 +16,7 @@
                         <p class="card-text">Total Amount: {{ $productSales->totalAmount }}</p>
                         <p class="card-text">Date: {{ $productSales->entryDate }}</p>
                       </div>
+                      <a href="{{ url('admin/products-sale') }}" class="btn btn-danger btn-small ml-3 mb-3" >Go Back</a>
                 </div>
             </div>
 

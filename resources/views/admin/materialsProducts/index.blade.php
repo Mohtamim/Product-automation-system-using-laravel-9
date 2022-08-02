@@ -10,7 +10,7 @@
 
                     <div class="card-body">
                         <a href="{{url('admin/material-to-products/create')}}" class="btn btn-success btn-sm" title="Add new Student">
-                            Add New
+                            <i class="fa-solid  fa-plus"> Add</i>
                         </a><br><br>
                         @if (session('flash_message'))
                         <div class="bg-danger text-white text-center">{{ session('flash_message')}}</div>

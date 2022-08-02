@@ -6,6 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h2>Product Details</h2>
+                        <a href="{{ url('admin/material-to-products') }}" class="btn btn-info btn-sm me-5" >Back to List</a>
                     </div>
 
                       <div class="card-body">
