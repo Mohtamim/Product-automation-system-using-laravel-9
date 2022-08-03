@@ -36,7 +36,7 @@
                                         <td>{{$item->materialsUnitePrice}}</td>
                                         <td>{{$item->updateStock}}</td>
                                         <td>
-                                            {{-- <a href="{{url(''.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a> --}}
+                                            <a href="{{url('admin/materials/'.$item->id)}}" class="btn btn-info btn-sm" title="View Student" aria-hidden="true"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('admin/materials/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit Student" aria-hidden="true"><i class="fa fa-pencil"></i></a>
                                             <form method="POST" action="{{ url('admin/materials/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}

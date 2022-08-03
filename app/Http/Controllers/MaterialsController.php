@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\materials;
-use App\Http\Controllers\Controller;
 use App\Models\uniteType;
 use Illuminate\Http\Request;
+use App\Http\Requests\materialsRe;
+use App\Http\Controllers\Controller;
 
 class MaterialsController extends Controller
 {
@@ -37,7 +38,7 @@ class MaterialsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(materialsRe $request)
     {
         $input= $request->all();
         materials::create($input);
@@ -77,7 +78,7 @@ class MaterialsController extends Controller
      * @param  \App\Models\materials  $materials
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(materialsRe $request,$id)
     {
         $materials = materials::find($id);
         $input = $request->all();
