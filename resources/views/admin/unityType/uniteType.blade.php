@@ -15,7 +15,7 @@
                             <table class="table text-center">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>SI</th>
                                         <th>Unit Name</th>
                                         <th>Actions</th>
                                     </tr>
@@ -28,7 +28,7 @@
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$item->uniteName}}</td>
                                         <td>
-
+                                            <a href="{{url('admin/unit-type/'.$item->id)}}" class="btn btn-info btn-sm" title="View adminCostType" aria-hidden="true"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('admin/unit-type/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit uniteType" aria-hidden="true"><i class="fa fa-pencil"></i></a>
                                                 <form method="POST" action="{{ url('admin/unit-type/'.$item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                     {{ method_field('DELETE') }}

@@ -13,10 +13,16 @@
                             {!! csrf_field() !!}
 
                             <label class="control-label">Unite Name</label><br>
-                            <input type="text" name="uniteName" id="uniteName" class="form-control"><br>
+                            <input type="text" name="uniteName" id="uniteName"  class="form-control @error('uniteName')
+                                is-invalid
+                            @enderror">
+                            @error('uniteName')
+                                <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
+                            <br>
 
                             <input type="submit" value="save" class="btn btn-success">
-                            <input type="Cancel" value="cancel" class="btn btn-danger">
+                            <a href="{{ url('admin/unit-type') }}" class="btn btn-danger">Cancel</a>
 
                         </form>
                       </div>

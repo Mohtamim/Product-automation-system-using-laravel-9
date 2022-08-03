@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\uniteType;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\uniteTypeRe;
 use Illuminate\Http\Request;
 
 class UniteTypeController extends Controller
@@ -35,7 +36,7 @@ class UniteTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(uniteTypeRe $request)
     {
         $input= $request->all();
         uniteType::create($input);
@@ -51,7 +52,7 @@ class UniteTypeController extends Controller
     public function show($id)
     {
         $uniteType = uniteType::find($id);
-        return view('admin.uniteTypeShow')->with('uniteType',$uniteType);
+        return view('admin.unityType.uniteTypeShow')->with('uniteType',$uniteType);
     }
 
     /**
@@ -73,7 +74,7 @@ class UniteTypeController extends Controller
      * @param  \App\Models\uniteType  $uniteType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(uniteTypeRe $request, $id)
     {
         $uniteType = uniteType::find($id);
         $input = $request->all();
