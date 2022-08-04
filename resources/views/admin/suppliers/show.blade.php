@@ -1,20 +1,21 @@
 @extends('admin.include.layout')
 @section('mainPart')
     <div class="container">
-        <div class="row" style="margin:20px;">
+        <div class="row bg-red" style="margin:20px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Suppliers Details</h2>
+                        <h2 class="text-center font-weight-bold text-success">Suppliers Details</h2>
+                        <a href="{{ url('admin/suppliers/') }}" class="btn btn-info">Back To List</a>
                     </div>
 
                       <div class="card-body">
-                        <h5 class="card-title">Supplier Name: {{ $students->supplierName }}</h5>
-                        <p class="card-text">Supplier Company: {{ $students->supplierCompany }}</p>
-                        <p class="card-text">Supplier Contact No: {{ $students->supplierContactNo }}</p>
-                        <p class="card-text">Email Address: {{ $students->emailAddress }}</p>
-                        <p class="card-text">Address: {{ $students->address }}</p>
-                        <p class="card-text">Update Balance: {{ $students->updateBalance }}</p>
+                        <p class="card-title text-dark">Supplier Name: {{ $suppliers->supplierName }}</p>
+                        <p class="card-text text-dark">Supplier Company: {{ $suppliers->supplierCompany }}</p>
+                        <p class="card-text text-dark">Supplier Contact No: {{ $suppliers->supplierContactNo }}</p>
+                        <p class="card-text text-dark">Email Address: {{ $suppliers->emailAddress }}</p>
+                        <p class="card-text text-dark">Address: {{ $suppliers->address }}</p>
+                        <p class="card-text text-dark">Update Balance: {{ $suppliers->updateBalance }}</p>
                       </div>
                 </div>
             </div>

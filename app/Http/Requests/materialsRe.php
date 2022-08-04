@@ -37,7 +37,7 @@ class materialsRe extends FormRequest
             'materialsName.required' => 'Materials Name is Required',
             'materialsCode.srting' => 'Materials Code is Required',
             'materialsUnite.srting' => 'Materials Unite is Required',
-            'materialsUnitePrice.srting' => 'Materials Unite Price is Required',
+            'materialsUnitePrice.numeric' => 'Materials Unite Price is Required',
             'updateStock.srting' => 'Update Stock Must be Numeric',
 
         ];
