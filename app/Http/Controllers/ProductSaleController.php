@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\productSale;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\productSaleRequest;
+use App\Models\customers;
+use App\Models\products;
 use Illuminate\Http\Request;
 
 class ProductSaleController extends Controller
@@ -18,7 +20,9 @@ class ProductSaleController extends Controller
 
     public function create()
     {
-        return view('admin.productSale.create');
+        $customer=customers::all();
+        $product=products::all();
+        return view('admin.productSale.create')->with(['customer'=>$customer,'product'=>$product]);
     }
 
 

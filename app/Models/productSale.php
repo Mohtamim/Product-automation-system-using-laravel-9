@@ -21,4 +21,12 @@ class productSale extends Model
 
     ];
     public $timestamps = false;
+    public function customer()
+    {
+        return $this->hasMany(customers::class );
+    }
+    public function product()
+    {
+        return $this->hasMany(products::class );
+    }
 }
