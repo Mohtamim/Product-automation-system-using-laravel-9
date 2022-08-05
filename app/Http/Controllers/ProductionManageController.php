@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\productionManage;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\productionManageRequest;
+use App\Models\materials;
+use App\Models\uniteType;
 use Illuminate\Http\Request;
 
 class ProductionManageController extends Controller
@@ -18,7 +20,9 @@ class ProductionManageController extends Controller
 
     public function create()
     {
-        return view('admin.productionManage.create');
+        $uniteType= uniteType::all();
+        $materials= materials::all();
+        return view('admin.productionManage.create')->with(['uniteType'=>$uniteType,'materials'=>$materials]);
     }
 
 
@@ -37,8 +41,10 @@ class ProductionManageController extends Controller
 
     public function edit($id)
     {
+        $uniteType= uniteType::all();
+        $materials= materials::all();
         $production = productionManage::find($id);
-        return view('admin.productionManage.edit')->with('productionManage',$production);
+        return view('admin.productionManage.edit')->with(['productionManage'=>$production,'uniteType'=>$uniteType,'materials'=>$materials]);
 
     }
 

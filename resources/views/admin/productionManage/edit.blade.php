@@ -40,27 +40,44 @@
                                   @enderror"  value="{{ $productionManage->selectProductName }}"> @error('selectProductName')
                                  <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
                                   @enderror <br>
-                            <label class="control-label">Unite Type</label><br>
-                            <input type="text" name="uniteType" id="uniteType" class="form-control
-                            @error('uniteType')
-                                 is-invalid
-                                  @enderror" value="{{ $productionManage->uniteType }}"> 
+
+
+                                  <label class="control-label">Unite Type</label><br>
+                                  <select class="form-select" name="uniteType" id="uniteType" aria-label="Default select example" class="form-select @error('uniteType') is-invalid
+                                  @enderror ">
+                                    <option  selected class="form-control" value="{{ $productionManage->uniteType }}"> select Unit</option>
+                                    @foreach ($uniteType as $uniteType)
+                                    <option value="{{ $uniteType->uniteName }}">{{ $uniteType->uniteName }}</option>
+                                    @endforeach
+                                  </select><br>
                                   @error('uniteType')
-                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
-                                  @enderror <br>
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message}}</strong>
+                                  </span><br>
+                              @enderror<br>
+
+
+
                             <label class="control-label">Production Quantity</label><br>
-                            <input type="number" name="productionQuantity" id="productionQuantity" class="form-control 
+                            <input type="number" name="productionQuantity" id="productionQuantity" class="form-control
                             @error('productionQuantity')
                                  is-invalid
                                   @enderror" value="{{ $productionManage->productionQuantity }}">@error('productionQuantity')
                                  <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
                                   @enderror <br>
-                            <label class="control-label">Selected Materials</label><br>
-                            <input type="text" name="selectedMaterials" id="selectedMaterials" class="form-control @error('selectedMaterials')
-                                 is-invalid
-                                  @enderror" value="{{ $productionManage->selectedMaterials }}"> @error('selectedMaterials')
-                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span><br>
-                                  @enderror <br>
+                                  <label class="control-label">Selected Materials</label><br>
+                                  <select class="form-select" name="selectedMaterials" id="selectedMaterials" aria-label="Default select example" >
+                                    <option  selected class="form-control @error('selectedMaterials') is-invalid
+                                    @enderror" value="{{ $productionManage->selectedMaterials }}"> select materials</option>
+                                    @foreach ($materials as $materials)
+                                    <option value="{{ $materials->materialsName }}">{{ $materials->materialsName }}</option>
+                                    @endforeach
+                                  </select><br><br>
+                                  @error('selectedMaterials')
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message}}</strong>
+                                  </span><br>
+                              @enderror<br>
                             <input type="submit" value="update" class="btn btn-success">
                             <a href="{{ url('admin/production-manage') }}" class="btn btn-danger btn-small" >Cancel</a>
 
