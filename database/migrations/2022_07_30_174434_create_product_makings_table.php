@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('product_makings', function (Blueprint $table) {
             $table->id();
+            $table->integer('productId');
             $table->string('selectProduct');
             $table->string('selectMaterials');
+            $table->integer('materialId');
             $table->decimal('materialsQuantity',5,2);
             $table->timestamps();
         });
-    
+
     }
 
     /**

@@ -12,25 +12,40 @@
                         <form action="{{url('admin/products-making')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Products</label><br>
-                            <input type="text" name="selectProduct" id="selectProduct" class="form-control
-                            @error('selectProduct')
-                                is-invalid
-                            @enderror" value="{{ old('selectProduct') }}"><br>
-                            @error('selectProduct')
+                            <select  id="selectProduct" name="selectProduct"  value="{{ old('selectProduct') }}" aria-label="Default select example" class="form-select @error('selectProduct') is-invalid
+
+                            @enderror">
+                                <option  selected class="form-control">Select Product</option>
+                                @foreach ($product as $product)
+                                <option value="{{ $product->productName }}">{{ $product->productName }}</option>
+                                <input type="hidden" name="productId" id="productId" class="form-control" value="{{ $product->id }}">
+                                @endforeach
+                              </select>
+                              @error('selectProduct')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message}}</strong>
                                 </span><br>
-                            @enderror
+                            @enderror<br>
+
                             <label class="control-label">Materials</label><br>
-                            <input type="text" name="selectMaterials" id="selectMaterials" class="form-control
-                            @error('selectMaterials')
-                                is-invalid
-                            @enderror" value="{{ old('selectMaterials') }}"><br>
-                            @error('selectMaterials')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message}}</strong>
-                            </span><br>
-                            @enderror
+                            <select  id="selectMaterials" name="selectMaterials"  value="{{ old('selectMaterials') }}" aria-label="Default select example" class="form-select @error('selectMaterials') is-invalid
+
+                            @enderror">
+                                <option  selected class="form-control">Select Product</option>
+                                @foreach ($material as $material)
+                                <option value="{{ $material->materialsName }}">{{ $material->materialsName }}</option>
+                                @if (@selected(true))
+                                <input type="hidden" name="productId" id="productId" class="form-control" value="{{ $product->id }}">
+                                @endif
+                                @endforeach
+                              </select>
+                              @error('selectMaterials')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message}}</strong>
+                                </span><br>
+                            @enderror<br>
+
+
                             <label class="control-label">Materials Quantity</label><br>
                             <input type="text" name="materialsQuantity" id="materialsQuantity" class="form-control
                             @error('materialsQuantity')

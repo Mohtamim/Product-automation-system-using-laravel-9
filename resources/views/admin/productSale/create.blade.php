@@ -20,7 +20,7 @@
                                 <option value="{{ $customer->customerName }}">{{ $customer->customerName }}</option>
                                 @endforeach
                               </select>
-                              @error('selectCustomer')
+                              @error('selectProduct')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message}}</strong>
                                 </span><br>

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class productionManage extends Model
 {
     use HasFactory;
-    protected $table ='productionManages';
+    protected $table ='productionmanages';
     protected $primarykey ='id';
     protected $fillable =[
                 'entryDate',
@@ -18,6 +18,6 @@ class productionManage extends Model
                 'uniteType',
                 'productionQuantity',
                 'selectedMaterials'
-                
+
     ];
 }
