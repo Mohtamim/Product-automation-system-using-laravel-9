@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\products;
 use App\Models\uniteType;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\uniteTypeRe;
 use Illuminate\Http\Request;
+use App\Http\Requests\uniteTypeRe;
+use App\Http\Controllers\Controller;
 
 class UniteTypeController extends Controller
 {
@@ -17,7 +18,7 @@ class UniteTypeController extends Controller
     public function index()
     {
         $uniteType= uniteType::all();
-       return view('admin.unityType.uniteType')->with('uniteType', $uniteType);
+        return view('admin.unityType.uniteType')->with('uniteType', $uniteType);
     }
 
     /**
@@ -26,7 +27,9 @@ class UniteTypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+
     {
+
         return view('admin.unityType.uniteTypeCreate');
     }
 
