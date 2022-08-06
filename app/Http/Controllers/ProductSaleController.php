@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\productSale;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\productSaleRequest;
-use App\Models\customers;
 use App\Models\products;
+use App\Models\customers;
+use App\Models\productSale;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use App\Http\Requests\productSaleRequest;
 
 class ProductSaleController extends Controller
 {
@@ -29,9 +31,22 @@ class ProductSaleController extends Controller
     public function store(productSaleRequest $request)
     {
         $input= $request->all();
+        $productQty= $request->entryQuantity;
+        $productName= $request->selectProduct;
+        $upStock = products::where('productName',$productName)->value('updatedStock');
+        $upStock-=$productQty;
+        if($upStock>0){
+        DB::table('products')
+            ->where('productName', $productName)
+            ->update(['updatedStock' => $upStock]);
+
         productSale::create($input);
         return redirect('admin/products-sale')->with('flash_message','Product Added');
     }
+    else{
+        Session::flash('stockAlert','Your Material out of stock');
+        return redirect('admin/products-sale/create');
+    }}
 
     public function show($id)
     {

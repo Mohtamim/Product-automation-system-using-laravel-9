@@ -43,7 +43,7 @@
                             @enderror<br>
 
                             <label class="control-label">Product Price</label><br>
-                            <input type="number" name="productPrice" id="productPrice" class="form-control
+                            <input type="number" name="productPrice" onkeyup="myFunction()" id="productPrice" class="form-control
                             @error('productPrice') is-invalid
                             @enderror" value="{{ old('productPrice') }}"><br>
                             @error('productPrice')
@@ -52,7 +52,7 @@
                                 </span><br>
                             @enderror
                             <label class="control-label">Entry Quantity</label><br>
-                            <input type="number" name="entryQuantity" id="entryQuantity" class="form-control
+                            <input type="number" name="entryQuantity" onkeyup="myFunction()" id="entryQuantity" class="form-control
                             @error('entryQuantity') is-invalid
                             @enderror" value="{{ old('entryQuantity') }}"><br>
                             @error('entryQuantity')
@@ -61,14 +61,15 @@
                                 </span><br>
                             @enderror
                             <label class="control-label">Total Amount</label><br>
-                            <input type="number" name="totalAmount" id="totalAmount" class="form-control
+                            <input type="number" disable name="totalAmount"  id="totalAmount"  class="form-control
                             @error('totalAmount') is-invalid
-                            @enderror" value="{{ old('totalAmount') }}"><br>
+                            @enderror" value=""><br>
                             @error('totalAmount')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message}}</strong>
                                 </span><br>
                             @enderror<br>
+
                             <label class="control-label">Entry Date</label><br>
                             <input type="date" name="entryDate" id="entryDate" class="form-control
                             @error('entryDate') is-invalid
@@ -88,4 +89,16 @@
 
         </div>
     </div>
+
+<script>
+    function myFunction() {
+        var productPrice = $('#productPrice').val();
+        var entryQuantity =$('#entryQuantity').val();
+        var totalAmount = parseFloat(productPrice * entryQuantity);
+
+         $("#totalAmount").val(totalAmount);
+      }
+</script>
+
+
 @endsection

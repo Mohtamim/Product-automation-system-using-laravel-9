@@ -26,6 +26,7 @@ class ProductsController extends Controller
     public function store(productsValidation $request)
     {
         $input= $request->all();
+        
         products::create($input);
         return redirect('admin/products')->with('flash_message','product Added');
     }

@@ -1,17 +1,18 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminCostTypeController;
-use App\Http\Controllers\AdminiCostEntryController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\MaterialsController;
-use App\Http\Controllers\MaterialsProductController;
-use App\Http\Controllers\ProductionManageController;
-use App\Http\Controllers\ProductMakingController;
-use App\Http\Controllers\ProductSaleController;
-use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SuppliersController;
 use App\Http\Controllers\UniteTypeController;
+use App\Http\Controllers\ProductSaleController;
+use App\Http\Controllers\AdminCostTypeController;
+use App\Http\Controllers\ProductMakingController;
+use App\Http\Controllers\AdminiCostEntryController;
+use App\Http\Controllers\MaterialsProductController;
+use App\Http\Controllers\ProductionManageController;
 
 
 /*
@@ -25,10 +26,10 @@ use App\Http\Controllers\UniteTypeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',function(){
+    return view('auth.login');
 });
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/',function(){
         return view('admin.include.index');
     })->name('adminHome');
@@ -44,8 +45,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('unit-type',UniteTypeController::class); // CRUD by Rayhan Rimon
     Route::resource('products',ProductsController::class);
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

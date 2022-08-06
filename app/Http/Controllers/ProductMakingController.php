@@ -34,7 +34,7 @@ class ProductMakingController extends Controller
         $productMaking =materials::all();
         $input =$request->all();
         $selectMaterials= $request->selectMaterials;
-        $upStock = materials::where('materialsName',$selectMaterials)->value('updateStock');
+        $upStock = materials::where('materialsName',$selectMaterials)->value('updatedStock');
         $materialsQuantity= $request->materialsQuantity;
         $upStock-=$materialsQuantity;
         if($upStock>=0){
