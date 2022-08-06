@@ -12,7 +12,7 @@
                         <form action="{{url('admin/products-sale')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Customer</label><br>
-                            <select  id="selectProduct" name="selectProduct"  value="{{ old('selectProduct') }}" aria-label="Default select example" class="form-select @error('selectProduct') is-invalid
+                            <select  id="selectCustomer" name="selectCustomer"  value="{{ old('selectCustomer') }}" aria-label="Default select example" class="form-select @error('selectCustomer') is-invalid
 
                             @enderror">
                                 <option  selected class="form-control">Select Customer</option>
@@ -20,7 +20,7 @@
                                 <option value="{{ $customer->customerName }}">{{ $customer->customerName }}</option>
                                 @endforeach
                               </select>
-                              @error('selectProduct')
+                              @error('selectCustomer')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message}}</strong>
                                 </span><br>
@@ -31,7 +31,7 @@
                             <select  id="selectProduct" name="selectProduct"  value="{{ old('selectProduct') }}" aria-label="Default select example" class="form-select @error('selectProduct') is-invalid
 
                             @enderror">
-                                <option  selected class="form-control">Select Customer</option>
+                                <option  selected class="form-control">Select Products</option>
                                 @foreach ($product as $product)
                                 <option value="{{ $product->productName }}">{{ $product->productName }}</option>
                                 @endforeach
