@@ -6,6 +6,7 @@ use App\Models\productionManage;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\productionManageRequest;
 use App\Models\materials;
+use App\Models\products;
 use App\Models\uniteType;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,9 @@ class ProductionManageController extends Controller
     {
         $uniteType= uniteType::all();
         $materials= materials::all();
-        return view('admin.productionManage.create')->with(['uniteType'=>$uniteType,'materials'=>$materials]);
+        $products= products::all();
+        $products= products::all();
+        return view('admin.productionManage.create')->with(['uniteType'=>$uniteType,'materials'=>$materials,'products'=>$products]);
     }
 
 
