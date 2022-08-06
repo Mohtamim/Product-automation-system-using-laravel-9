@@ -47,7 +47,7 @@
                             @if (session('flash_message'))
                                 <div class="bg-danger text-white text-center">{{ session('flash_message') }}</div>
                             @endif
-                            <input type="number" value="{{ old('materialsQuantity') }}" name="materialsQuantity"
+                            <input type="number" step="0.01" value="{{ old('materialsQuantity') }}" name="materialsQuantity"
                                 id="materialsQuantity"
                                 class="form-control
                             @error('materialsQuantity') is-invalid @enderror"

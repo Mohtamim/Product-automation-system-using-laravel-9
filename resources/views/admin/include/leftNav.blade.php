@@ -37,12 +37,12 @@
                 <li class="{{ Route::is('admin.products-making*') ? 'active' : '' }}"><a href="{{ url('admin/products-making') }}"><i class="fa fa-globe"></i> <span>Products Making</span></a></li>
                 <li class="{{ Route::is('admin.admin-cost*') ? 'active' : '' }}"><a href="{{url('admin/admin-cost')}}"><i class="fa fa-share-alt-square"></i> <span>Admin Cost</span></a></li>
                 <li class="{{ Route::is('admin.cost-entry*') ? 'active' : '' }}"><a href="{{url('admin/cost-entry')}}"><i class="fa fa-share-alt-square"></i> <span>Expence</span></a></li>
-                <li class="header">Vendors</li>
+                <li class="header"></li>
                 <li>
                     <a href="#uiElements" class="has-arrow"><i class="fa fa-diamond"></i><span>Reports</span></a>
                     <ul>
-                        <li><a href="ui-helper-class.blade.php">Helper Classes</a></li>
-                        <li><a href="ui-bootstrap.blade.php">Bootstrap UI</a></li>
+                        <li><a href="{{ url('admin/products-sale') }}">All sale</a></li>
+                        <li><a href="{{ url('admin/material') }}">Materials</a></li>
                         <li><a href="ui-typography.blade.php">Typography</a></li>
                         <li><a href="ui-tabs.blade.php">Tabs</a></li>
                         <li><a href="ui-buttons.blade.php">Buttons</a></li>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MaterialsControlle;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\MaterialsController;
@@ -45,6 +46,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('unit-type',UniteTypeController::class); // CRUD by Rayhan Rimon
     Route::resource('products',ProductsController::class);
 
+Route::get('material',[MaterialsControlle::class,'index']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 });

@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\productSaleRequest;
+use App\Models\materials;
+use App\Models\productMaking;
 
 class ProductSaleController extends Controller
 {
@@ -33,6 +35,10 @@ class ProductSaleController extends Controller
         $input= $request->all();
         $productQty= $request->entryQuantity;
         $productName= $request->selectProduct;
+
+
+
+
         $upStock = products::where('productName',$productName)->value('updatedStock');
         $upStock-=$productQty;
         if($upStock>0){
