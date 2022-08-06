@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\productMaking;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\proMakingValidation;
-use App\Models\materials;
 use App\Models\products;
+use App\Models\materials;
 use Illuminate\Http\Request;
+use App\Models\productMaking;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use App\Http\Requests\proMakingValidation;
 
 class ProductMakingController extends Controller
 {
@@ -32,20 +33,21 @@ class ProductMakingController extends Controller
     {
         $productMaking =materials::all();
         $input =$request->all();
-
-        $selectProduct= $request->selectProduct;
         $selectMaterials= $request->selectMaterials;
+        $upStock = materials::where('materialsName',$selectMaterials)->value('updateStock');
         $materialsQuantity= $request->materialsQuantity;
-        $productMaking-> updateStock= $productMaking-> updateStock-$materialsQuantity;
-        $productMaking->update($productMaking)->where('materialName',$selectMaterials);
-
-    //     DB::table('materials')->where('materialsName', $selectMaterials)
-    //     ->raw('SUM(updateStock - $materialsQuantity)');
-
-    // ;
+        $upStock-=$materialsQuantity;
+        if($upStock>=0){
+        DB::table('materials')
+            ->where('materialsName', $selectMaterials)
+            ->update(['updateStock' => $upStock]);
 
         productMaking::create($input);
         return redirect('admin/products-making')->with('flash_message','product Added');
+    }else{
+        Session::flash('stockAlert','Your Material out of stock');
+        return redirect('admin/products-making/create');
+    }
     }
 
     public function show($id)
