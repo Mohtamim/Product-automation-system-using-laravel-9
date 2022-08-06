@@ -10,7 +10,7 @@ class productMaking extends Model
 
     use HasFactory;
     protected $table ='product_makings';
-    protected $primarykey ='id';
+    protected $primaryKey ='id';
     protected $fillable =[
                 'selectProduct',
                 'selectMaterials',

@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\products;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\productsValidation;
+use App\Models\uniteType;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    
+
     public function index()
     {
         $products =products::all();
@@ -18,7 +19,8 @@ class ProductsController extends Controller
 
     public function create()
     {
-        return view('admin.products.create');
+        $uniteType =uniteType::all();
+        return view('admin.products.create') -> with('uniteType', $uniteType);
     }
 
     public function store(productsValidation $request)
@@ -34,11 +36,12 @@ class ProductsController extends Controller
         return view('admin.products.product_Show')->with('products',$products);
     }
 
-    
+
     public function edit($id)
     {
+        $uniteType =uniteType::all();
         $products = products::find($id);
-        return view('admin.products.edit')->with('products', $products);
+        return view('admin.products.edit')->with(['products' => $products, 'uniteType' => $uniteType]);
     }
 
     public function update(productsValidation $request, $id)

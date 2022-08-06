@@ -20,4 +20,14 @@ class productionManage extends Model
                 'selectedMaterials'
 
     ];
+
+    public function uniteType()
+    {
+        return $this->hasMany(uniteType::class);
+    }
+    public function Materials()
+    {
+        return $this->hasMany(materials::class);
+    }
+
 }

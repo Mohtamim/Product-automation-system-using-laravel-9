@@ -10,7 +10,7 @@
 
                       <div class="card-body">
                         <form action="{{ url('admin/products/' .$products->id) }}" method="post">
-                            {!! csrf_field() !!} 
+                            {!! csrf_field() !!}
                             @method("PATCH")
                             <input type="hidden" name="id" id="id" value="{{$products->id}}" />
                             <label class="control-label">Products</label><br>
@@ -23,7 +23,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span><br>
                             @enderror
-                            <label class="control-label">Unit Type</label><br>
+                            {{-- <label class="control-label">Unit Type</label><br>
                             <input type="text" name="selectUniteType" id="selectUniteType" class="form-control
                             @error('selectUniteType')
                             is-invalid
@@ -32,7 +32,17 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span><br>
-                            @enderror
+                            @enderror --}}
+                            <label class="control-label">Unit Type</label><br>
+                            <select class="form-select" name="selectUniteType" id="selectUniteType"  aria-label="Default select example">
+
+                                <option selected class="form-control" value="{{$products->selectUniteType}}" >{{$products->selectUniteType}}</option>
+                                @foreach ($uniteType as $items)
+                                <option value="{{ $items->uniteName }}">{{ $items->uniteName }}</option>
+                                @endforeach
+
+
+                            </select><br>
                             <label class="control-label">Price</label><br>
                             <input type="number" name="productPrice" id="productPrice" class="form-control @error('productPrice')
                             is-invalid
