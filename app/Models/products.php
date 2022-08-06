@@ -9,12 +9,16 @@ class products extends Model
 {
     use HasFactory;
     protected $table ='products';
-    protected $primarykey ='id';
+    protected $primaryKey ='id';
     protected $fillable =[
                 'productName',
                 'selectUniteType',
                 'productPrice',
                 'updatedStock'
-                
+
     ];
+    public function uniteType()
+    {
+        return $this->hasMany(uniteType::class);
+    }
 }

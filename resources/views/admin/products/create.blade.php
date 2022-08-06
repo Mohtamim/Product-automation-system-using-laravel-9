@@ -9,7 +9,7 @@
                     </div>
 
                       <div class="card-body">
-                        <form action="{{url('admin/products')}}" method="post" class="form">
+                        <form action="{{ url('admin/products') }}" method="post" class="form">
                             {!! csrf_field() !!}
                              <label class="control-label">Products</label><br>
                             <input type="text" name="productName" id="productName" class="form-control
@@ -21,7 +21,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span><br>
                             @enderror
-                            <label class="control-label">Unit Type</label><br>
+                            {{-- <label class="control-label">Unit Type</label><br>
                             <input type="text" name="selectUniteType" id="selectUniteType" class="form-control
                             @error('selectUniteType')
                                 is-invalid
@@ -30,7 +30,25 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span><br>
-                            @enderror
+                            @enderror --}}
+                            <label class="control-label">Unit Type</label><br>
+                            <select class="form-select" name="selectUniteType" id="selectUniteType" aria-label="Default select example">
+
+                                <option selected class="form-control ">Select</option>
+                                @foreach ($uniteType as $items)
+                                <option value="{{ $items->uniteName }}" class="@error('selectUniteType')
+                                    is-invalid
+                                @enderror">
+                                {{ $items->uniteName }} </option>
+                                @error('selectUniteType')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span><br>
+                                @enderror
+                                @endforeach
+
+
+                            </select><br>
                             <label class="control-label">Price</label><br>
                               <input type="number" name="productPrice" id="productPrice" class="form-control
                             @error('productPrice')
