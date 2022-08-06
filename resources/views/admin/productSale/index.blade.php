@@ -35,7 +35,7 @@
                                         <td>{{$item->productPrice}}</td>
                                         <td>{{$item->entryQuantity}}</td>
                                         <td>{{$item->totalAmount}}</td>
-                                        <td>{{$item->entryDate}}</td>
+                                        <td>{{ \Carbon\Carbon::parse($item->entryDate)->diffForHumans() }}</td>
                                         <td>
                                             <a href="{{url('admin/products-sale/'.$item->id)}}" class="btn btn-info btn-sm" title="View Product" aria-hidden="true"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('admin/products-sale/'.$item->id.'/edit')}}" class="btn btn-primary btn-sm" title="Edit product" aria-hidden="true"><i class="fa fa-pencil"></i></a>

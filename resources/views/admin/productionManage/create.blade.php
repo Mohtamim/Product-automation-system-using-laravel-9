@@ -40,7 +40,7 @@
                                 class="form-select @error('selectProductName') is-invalid @enderror">
                                 <option selected class="form-control"> select Product</option>
                                 @foreach ($products as $products)
-                                    <option value="{{ $products->id }}">{{ $products->productName }}</option>
+                                    <option value="{{ $products->productName }}">{{ $products->productName }}</option>
                                 @endforeach
                             </select><br>
                             @error('selectProductName')

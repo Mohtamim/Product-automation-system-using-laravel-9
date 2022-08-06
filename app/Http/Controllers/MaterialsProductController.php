@@ -6,6 +6,7 @@ use App\Models\materialsProduct;
 use App\Http\Controllers\Controller;
 use App\Models\materials;
 use App\Models\suppliers;
+use App\Models\uniteType;
 use Illuminate\Http\Request;
 
 class MaterialsProductController extends Controller
@@ -22,7 +23,8 @@ class MaterialsProductController extends Controller
     {
         $supplier = suppliers::all();
         $material = materials::all();
-        return view('admin.materialsProducts.create')->with(['supplier'=> $supplier,'material'=> $material]);
+        $unit = uniteType::all();
+        return view('admin.materialsProducts.create')->with(['supplier'=> $supplier,'material'=> $material,'unit'=>$unit]);
     }
 
     public function store(Request $request)

@@ -33,7 +33,7 @@
 
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$item->entryDate}}</td>
+                                        <td>{{ \Carbon\Carbon::parse($item->entryDate)->diffForHumans() }}</td>
                                         <td>{{$item->productionNo}}</td>
                                         <td>{{$item->expiryDate}}</td>
                                         <td>{{$item->selectProductName}}</td>

@@ -12,7 +12,7 @@
                         <form action="{{url('admin/material-to-products')}}" method="post" class="form">
                             {!! csrf_field() !!}
                             <label class="control-label">Supplier</label><br>
-                            <select class="form-select" name="selectSupplier" id="selectSupplier" aria-label="Default select example">
+                            <select class="form-select" name="uniteType" id="uniteType" aria-label="Default select example">
                                 <option  selected class="form-control">Open this select menu</option>
                                 @foreach ($supplier as $supplier)
                                 <option value="{{ $supplier->supplierName }}">{{ $supplier->supplierName }}</option>
@@ -26,10 +26,16 @@
                                 @endforeach
                               </select><br><br>
                             <label class="control-label">Unite Type</label><br>
-                            <input type="number" name="uniteType" id="uniteType" class="form-control
-                            @error('uniteType')
-                                is-invalid
-                            @enderror" value="{{ old('uniteType') }}"><br>
+
+                            <select  name="uniteType" id="uniteType" aria-label="Default select example" class="form-select @error('uniteType')
+                            is-invalid
+                        @enderror" value="{{ old('uniteType') }}"><br>>
+                                <option  selected class="form-control">Open this select menu</option>
+                                @foreach ($unite as $unite)
+                                <option value="{{ $unite->uniteName }}">{{ $unite->uniteName }}</option>
+                                @endforeach
+                              </select><br>
+
                             @error('uniteType')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
