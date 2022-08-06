@@ -15,8 +15,6 @@ class productMaking extends Model
                 'selectProduct',
                 'selectMaterials',
                 'materialsQuantity',
-                'productId',
-                'materialId'
 
     ];
     public function product()

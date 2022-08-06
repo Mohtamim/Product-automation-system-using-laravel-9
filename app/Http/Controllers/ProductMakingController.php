@@ -8,6 +8,7 @@ use App\Http\Requests\proMakingValidation;
 use App\Models\materials;
 use App\Models\products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductMakingController extends Controller
 {
@@ -29,7 +30,20 @@ class ProductMakingController extends Controller
 
     public function store(proMakingValidation $request)
     {
-        $input= $request->all();
+        $productMaking =materials::all();
+        $input =$request->all();
+
+        $selectProduct= $request->selectProduct;
+        $selectMaterials= $request->selectMaterials;
+        $materialsQuantity= $request->materialsQuantity;
+        $productMaking-> updateStock= $productMaking-> updateStock-$materialsQuantity;
+        $productMaking->update($productMaking)->where('materialName',$selectMaterials);
+
+    //     DB::table('materials')->where('materialsName', $selectMaterials)
+    //     ->raw('SUM(updateStock - $materialsQuantity)');
+
+    // ;
+
         productMaking::create($input);
         return redirect('admin/products-making')->with('flash_message','product Added');
     }

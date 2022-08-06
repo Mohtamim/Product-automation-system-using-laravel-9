@@ -18,7 +18,6 @@
                                 <option  selected class="form-control">Select Product</option>
                                 @foreach ($product as $product)
                                 <option value="{{ $product->productName }}">{{ $product->productName }}</option>
-                                <input type="hidden" name="productId" id="productId" class="form-control" value="{{ $product->id }}">
                                 @endforeach
                               </select>
                               @error('selectProduct')
@@ -34,9 +33,7 @@
                                 <option  selected class="form-control">Select Product</option>
                                 @foreach ($material as $material)
                                 <option value="{{ $material->materialsName }}">{{ $material->materialsName }}</option>
-                                @if (@selected(true))
-                                <input type="hidden" name="productId" id="productId" class="form-control" value="{{ $product->id }}">
-                                @endif
+
                                 @endforeach
                               </select>
                               @error('selectMaterials')
@@ -47,7 +44,7 @@
 
 
                             <label class="control-label">Materials Quantity</label><br>
-                            <input type="text" name="materialsQuantity" id="materialsQuantity" class="form-control
+                            <input type="number" name="materialsQuantity" id="materialsQuantity" class="form-control
                             @error('materialsQuantity')
                                 is-invalid
                             @enderror" value="{{ old('materialsQuantity') }}"><br>
