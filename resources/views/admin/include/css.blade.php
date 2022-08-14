@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ asset('assets/vendor/toastr/toastr.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
 
+
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="{{ asset('assets/css/mooli.min.css') }}">
 
